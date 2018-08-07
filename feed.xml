@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-07T18:12:47+02:00</updated><id>http://localhost:4000/</id><title type="html">Xela’s Blog</title><subtitle>Little blog where I share what I know, but especially interesting things that I discover.</subtitle><entry><title type="html">Create gists from Command Line</title><link href="http://localhost:4000/blog/create-gist-from-cli" rel="alternate" type="text/html" title="Create gists from Command Line" /><published>2018-08-07T00:00:00+02:00</published><updated>2018-08-07T00:00:00+02:00</updated><id>http://localhost:4000/blog/create-gist-from-cli</id><content type="html" xml:base="http://localhost:4000/blog/create-gist-from-cli">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-07T18:45:52+02:00</updated><id>http://localhost:4000/</id><title type="html">Xela’s Blog</title><subtitle>Little blog where I share what I know, but especially interesting things that I discover.</subtitle><entry><title type="html">Fix right click on taskbar icons</title><link href="http://localhost:4000/blog/fix-right-click-on-taskbar-icons" rel="alternate" type="text/html" title="Fix right click on taskbar icons" /><published>2018-08-07T00:00:00+02:00</published><updated>2018-08-07T00:00:00+02:00</updated><id>http://localhost:4000/blog/fix-right-click-on-taskbar-icons</id><content type="html" xml:base="http://localhost:4000/blog/fix-right-click-on-taskbar-icons">&lt;p&gt;When I’m using Windows 10 I am sometimes facing the problem that I can’t right click on my taskbar icons, but I found few solutions on how to fix it.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;PS: This works on windows 7 and 8 aswell&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-1--using-shift--right-click&quot;&gt;Solution 1 : Using Shift + right-click&lt;/h2&gt;
+
+&lt;p&gt;All you have to do is to hold &lt;strong&gt;shift key&lt;/strong&gt; while right clicking any icon on your taskbar and after that you will be able to right click normally on your taskbar icons.
+But keep in mind that even if this method works, it should be considered a workaround rather than a fix.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-2--restart-the-windows-explorer&quot;&gt;Solution 2 : Restart the Windows Explorer&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Press &lt;strong&gt;Ctrl + Shift + Esc&lt;/strong&gt; to open up &lt;strong&gt;Task Manager&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;In &lt;strong&gt;Task Manager&lt;/strong&gt;, locate the &lt;strong&gt;Windows Explorer&lt;/strong&gt; process, &lt;strong&gt;right-click&lt;/strong&gt; on it and choose &lt;strong&gt;Restart&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uoiR4UT.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now see whether the fix was effective by right-clicking an icon on your taskbar.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-3--restarting-the-tile-data-model-server&quot;&gt;Solution 3 : Restarting the Tile Data model server&lt;/h2&gt;
+
+&lt;p&gt;1.
+Press &lt;strong&gt;Windows Key + R&lt;/strong&gt; to open up a Run command. Then, type “&lt;strong&gt;services.msc&lt;/strong&gt;” and hit &lt;strong&gt;Enter&lt;/strong&gt; to open the Services window.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/A80WF3a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.
+In the &lt;strong&gt;Services&lt;/strong&gt; window, scroll through the &lt;strong&gt;Local Services&lt;/strong&gt; list and locate &lt;strong&gt;Tile Data model server&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;3.
+Right-click on &lt;strong&gt;Tile Data model server&lt;/strong&gt; and choose &lt;strong&gt;Restart&lt;/strong&gt;, then wait for the service to be restarted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Ul6NYUw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4.
+Right-click anything in your taskbar to see if the fix has been effective.&lt;/p&gt;</content><author><name></name></author><summary type="html">When I’m using Windows 10 I am sometimes facing the problem that I can’t right click on my taskbar icons, but I found few solutions on how to fix it. PS: This works on windows 7 and 8 aswell Solution 1 : Using Shift + right-click All you have to do is to hold shift key while right clicking any icon on your taskbar and after that you will be able to right click normally on your taskbar icons. But keep in mind that even if this method works, it should be considered a workaround rather than a fix. Solution 2 : Restart the Windows Explorer Press Ctrl + Shift + Esc to open up Task Manager. In Task Manager, locate the Windows Explorer process, right-click on it and choose Restart. Now see whether the fix was effective by right-clicking an icon on your taskbar. Solution 3 : Restarting the Tile Data model server 1. Press Windows Key + R to open up a Run command. Then, type “services.msc” and hit Enter to open the Services window. 2. In the Services window, scroll through the Local Services list and locate Tile Data model server. 3. Right-click on Tile Data model server and choose Restart, then wait for the service to be restarted. 4. Right-click anything in your taskbar to see if the fix has been effective.</summary></entry><entry><title type="html">Create gists from Command Line</title><link href="http://localhost:4000/blog/create-gist-from-cli" rel="alternate" type="text/html" title="Create gists from Command Line" /><published>2018-08-07T00:00:00+02:00</published><updated>2018-08-07T00:00:00+02:00</updated><id>http://localhost:4000/blog/create-gist-from-cli</id><content type="html" xml:base="http://localhost:4000/blog/create-gist-from-cli">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
 &lt;p&gt;1.
 Install &lt;code&gt;pretty-diff&lt;/code&gt; npm package&lt;/p&gt;
