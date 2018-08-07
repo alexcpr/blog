@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-07T18:45:52+02:00</updated><id>http://localhost:4000/</id><title type="html">Xela’s Blog</title><subtitle>Little blog where I share what I know, but especially interesting things that I discover.</subtitle><entry><title type="html">Fix right click on taskbar icons</title><link href="http://localhost:4000/blog/fix-right-click-on-taskbar-icons" rel="alternate" type="text/html" title="Fix right click on taskbar icons" /><published>2018-08-07T00:00:00+02:00</published><updated>2018-08-07T00:00:00+02:00</updated><id>http://localhost:4000/blog/fix-right-click-on-taskbar-icons</id><content type="html" xml:base="http://localhost:4000/blog/fix-right-click-on-taskbar-icons">&lt;p&gt;When I’m using Windows 10 I am sometimes facing the problem that I can’t right click on my taskbar icons, but I found few solutions on how to fix it.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-07T18:56:19+02:00</updated><id>http://localhost:4000/</id><title type="html">Xela’s Blog</title><subtitle>Little blog where I share what I know, but especially interesting things that I discover.</subtitle><entry><title type="html">Page load time counter in JS</title><link href="http://localhost:4000/blog/page-load-time-counter" rel="alternate" type="text/html" title="Page load time counter in JS" /><published>2018-08-07T00:00:00+02:00</published><updated>2018-08-07T00:00:00+02:00</updated><id>http://localhost:4000/blog/page-load-time-counter</id><content type="html" xml:base="http://localhost:4000/blog/page-load-time-counter">&lt;p&gt;What I would like to see on websites is a little counter of the page load time placed in the footer, so I decided to share you the little piece of code in order to easily integrate this counter in your website footer.&lt;/p&gt;
+
+&lt;p&gt;ES5 Version (Older browsers)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(function() {
+  var t = window.performance &amp;amp;&amp;amp; performance.timing;
+  if (!t) {
+    return;
+  }
+  var loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
+  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
+})();&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ES6 Version (Modern browsers)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(function(){
+  const t = window.performance &amp;amp;&amp;amp; performance.timing;
+  if (!t) {
+    return;
+  }
+  const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
+  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
+}())&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><summary type="html">What I would like to see on websites is a little counter of the page load time placed in the footer, so I decided to share you the little piece of code in order to easily integrate this counter in your website footer. ES5 Version (Older browsers) (function() { var t = window.performance &amp;amp;&amp;amp; performance.timing; if (!t) { return; } var loadTime = (t.loadEventEnd - t.navigationStart) / 1000; alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;); })(); ES6 Version (Modern browsers) (function(){ const t = window.performance &amp;amp;&amp;amp; performance.timing; if (!t) { return; } const loadTime = (t.loadEventEnd - t.navigationStart) / 1000; alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;); }())</summary></entry><entry><title type="html">Fix right click on taskbar icons</title><link href="http://localhost:4000/blog/fix-right-click-on-taskbar-icons" rel="alternate" type="text/html" title="Fix right click on taskbar icons" /><published>2018-08-07T00:00:00+02:00</published><updated>2018-08-07T00:00:00+02:00</updated><id>http://localhost:4000/blog/fix-right-click-on-taskbar-icons</id><content type="html" xml:base="http://localhost:4000/blog/fix-right-click-on-taskbar-icons">&lt;p&gt;When I’m using Windows 10 I am sometimes facing the problem that I can’t right click on my taskbar icons, but I found few solutions on how to fix it.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;PS: This works on windows 7 and 8 aswell&lt;/em&gt;&lt;/p&gt;
 
