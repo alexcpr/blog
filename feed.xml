@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-06T18:17:08+02:00</updated><id>http://localhost:4000/</id><title type="html">Xela’s Blog</title><subtitle>Little blog where I share what I know, but especially interesting things that I discover.</subtitle><entry><title type="html">Welcome</title><link href="http://localhost:4000/blog/welcome" rel="alternate" type="text/html" title="Welcome" /><published>2018-08-06T00:00:00+02:00</published><updated>2018-08-06T00:00:00+02:00</updated><id>http://localhost:4000/blog/welcome</id><content type="html" xml:base="http://localhost:4000/blog/welcome">&lt;p&gt;Hello!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-07T18:12:47+02:00</updated><id>http://localhost:4000/</id><title type="html">Xela’s Blog</title><subtitle>Little blog where I share what I know, but especially interesting things that I discover.</subtitle><entry><title type="html">Create gists from Command Line</title><link href="http://localhost:4000/blog/create-gist-from-cli" rel="alternate" type="text/html" title="Create gists from Command Line" /><published>2018-08-07T00:00:00+02:00</published><updated>2018-08-07T00:00:00+02:00</updated><id>http://localhost:4000/blog/create-gist-from-cli</id><content type="html" xml:base="http://localhost:4000/blog/create-gist-from-cli">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;1.
+Install &lt;code&gt;pretty-diff&lt;/code&gt; npm package&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g pretty-diff&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.
+Add your github username into git global configuration&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global github.user &quot;YourGitHubUsernameHere&quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.
+Create a &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;Personal Access Token&lt;/a&gt; (don’t forget to check the “Create gist” checkbox) in order to &lt;code&gt;pretty-diff&lt;/code&gt; to work. Once you have created the token, run this command&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global gist-diff.token &quot;YourPersonalAccessTokenHere&quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you’re ready to use &lt;code&gt;gist-diff&lt;/code&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-gist&quot;&gt;Creating a Gist&lt;/h2&gt;
+
+&lt;p&gt;Now you can just run &lt;code&gt;gist-diff&lt;/code&gt; command in order to create a gist with the content of &lt;code&gt;git diff&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gist-diff&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When &lt;code&gt;gist-diff&lt;/code&gt; has created the gist it will open the gist URL in your browser.&lt;/p&gt;</content><author><name></name></author><summary type="html">Installation 1. Install pretty-diff npm package npm install -g pretty-diff 2. Add your github username into git global configuration git config --global github.user &quot;YourGitHubUsernameHere&quot; 3. Create a Personal Access Token (don’t forget to check the “Create gist” checkbox) in order to pretty-diff to work. Once you have created the token, run this command git config --global gist-diff.token &quot;YourPersonalAccessTokenHere&quot; Now you’re ready to use gist-diff! Creating a Gist Now you can just run gist-diff command in order to create a gist with the content of git diff gist-diff When gist-diff has created the gist it will open the gist URL in your browser.</summary></entry><entry><title type="html">Welcome</title><link href="http://localhost:4000/blog/welcome" rel="alternate" type="text/html" title="Welcome" /><published>2018-08-06T00:00:00+02:00</published><updated>2018-08-06T00:00:00+02:00</updated><id>http://localhost:4000/blog/welcome</id><content type="html" xml:base="http://localhost:4000/blog/welcome">&lt;p&gt;Hello!&lt;/p&gt;
 
 &lt;p&gt;Welcome to my blog.
 I am Xela a developer which decided to create a blog to share knowledge and things that I discover.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello! Welcome to my blog. I am Xela a developer which decided to create a blog to share knowledge and things that I discover.</summary></entry></feed>
