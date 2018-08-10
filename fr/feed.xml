@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Nouvelles et mises à jour | Xela's Blog</title>
-  <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
-  <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-10T15:57:45+02:00</updated>
-  <id>https://xela.isfucking.cool/</id>
+  <link href="http://localhost:4000/feed.xml" rel="self"/>
+  <link href="http://localhost:4000/"/>
+  <updated>2018-08-10T16:02:24+02:00</updated>
+  <id>http://localhost:4000/</id>
   <author>
     <name></name>
   </author>
@@ -13,9 +13,9 @@
   
   <entry>
     <title>Compteur de temps de chargement d'une page en JS</title>
-    <link href="https://xela.isfucking.cool/blog/fr/page-load-time-counter"/>
+    <link href="http://localhost:4000/blog/fr/page-load-time-counter"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/page-load-time-counter</id>
+    <id>http://localhost:4000/blog/fr/page-load-time-counter</id>
     <content type="html">&lt;p&gt;Ce que j’aimerais voir sur les sites web est un petit compteur du temps de chargement de la page placé dans le footer de la page, alors j’ai décidé de vous partager le petit morceau de code afin d’intégrer facilement ce compteur dans le footer sur votre site web.&lt;/p&gt;
 
 &lt;p&gt;Version ES5 (Navigateurs anciens)&lt;/p&gt;
@@ -44,9 +44,9 @@
   
   <entry>
     <title>Comment faire un bouton Google avec du CSS</title>
-    <link href="https://xela.isfucking.cool/blog/fr/how-to-make-a-google-button"/>
+    <link href="http://localhost:4000/blog/fr/how-to-make-a-google-button"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/how-to-make-a-google-button</id>
+    <id>http://localhost:4000/blog/fr/how-to-make-a-google-button</id>
     <content type="html">&lt;p&gt;Personnellement, j’aime le design des boutons google, ils sont simples, légers et modernes à la fois. J’ai donc décidé de reproduire moi-même le design des boutons google avec du CSS.&lt;/p&gt;
 
 &lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
@@ -102,9 +102,9 @@
   
   <entry>
     <title>Réparer le clic droit sur les icônes de la barre des tâches</title>
-    <link href="https://xela.isfucking.cool/blog/fr/fix-right-click-on-taskbar-icons"/>
+    <link href="http://localhost:4000/blog/fr/fix-right-click-on-taskbar-icons"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/fix-right-click-on-taskbar-icons</id>
+    <id>http://localhost:4000/blog/fr/fix-right-click-on-taskbar-icons</id>
     <content type="html">&lt;p&gt;Quand j’utilise Windows 10, je suis parfois confronté au problème que je ne peux pas faire un clic droit sur mes icônes de la barre des tâches, mais j’ai trouvé quelques solutions pour résoudre cela.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;NB: Cela fonctionne également sur Windows 7 et 8.&lt;/em&gt;&lt;/p&gt;
@@ -149,9 +149,9 @@ Cliquez avec le bouton droit de la souris sur n’importe quoi dans votre barre 
   
   <entry>
     <title>Créer des gists en ligne de commande</title>
-    <link href="https://xela.isfucking.cool/blog/fr/create-gist-from-cli"/>
+    <link href="http://localhost:4000/blog/fr/create-gist-from-cli"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/create-gist-from-cli</id>
+    <id>http://localhost:4000/blog/fr/create-gist-from-cli</id>
     <content type="html">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
 &lt;p&gt;1.
@@ -188,9 +188,9 @@ Créez un &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;jeton d�
   
   <entry>
     <title>Bienvenue</title>
-    <link href="https://xela.isfucking.cool/blog/fr/welcome"/>
+    <link href="http://localhost:4000/blog/fr/welcome"/>
     <updated>2018-08-06T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/welcome</id>
+    <id>http://localhost:4000/blog/fr/welcome</id>
     <content type="html">&lt;p&gt;Bonjour !&lt;/p&gt;
 
 &lt;p&gt;Bienvenue sur mon blog.

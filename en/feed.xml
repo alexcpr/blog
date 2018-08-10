@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>News 'n' Updates | Xela's Blog</title>
-  <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
-  <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-10T15:57:45+02:00</updated>
-  <id>https://xela.isfucking.cool/</id>
+  <link href="http://localhost:4000/feed.xml" rel="self"/>
+  <link href="http://localhost:4000/"/>
+  <updated>2018-08-10T16:02:24+02:00</updated>
+  <id>http://localhost:4000/</id>
   <author>
     <name></name>
   </author>
@@ -21,9 +21,9 @@
   
   <entry>
     <title>Page load time counter in JS</title>
-    <link href="https://xela.isfucking.cool/blog/en/page-load-time-counter"/>
+    <link href="http://localhost:4000/blog/en/page-load-time-counter"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/page-load-time-counter</id>
+    <id>http://localhost:4000/blog/en/page-load-time-counter</id>
     <content type="html">&lt;p&gt;What I would like to see on websites is a little counter of the page load time placed in the footer, so I decided to share you the little piece of code in order to easily integrate this counter in your website footer.&lt;/p&gt;
 
 &lt;p&gt;ES5 Version (Older browsers)&lt;/p&gt;
@@ -52,9 +52,9 @@
   
   <entry>
     <title>How to make a Google button with CSS</title>
-    <link href="https://xela.isfucking.cool/blog/en/how-to-make-a-google-button"/>
+    <link href="http://localhost:4000/blog/en/how-to-make-a-google-button"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/how-to-make-a-google-button</id>
+    <id>http://localhost:4000/blog/en/how-to-make-a-google-button</id>
     <content type="html">&lt;p&gt;I personally like the google buttons design, they are simple, lightweight and modern at the same time. So I decided to reproduce the google buttons design myself with some CSS.&lt;/p&gt;
 
 &lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
@@ -110,9 +110,9 @@
   
   <entry>
     <title>Fix right click on taskbar icons</title>
-    <link href="https://xela.isfucking.cool/blog/en/fix-right-click-on-taskbar-icons"/>
+    <link href="http://localhost:4000/blog/en/fix-right-click-on-taskbar-icons"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/fix-right-click-on-taskbar-icons</id>
+    <id>http://localhost:4000/blog/en/fix-right-click-on-taskbar-icons</id>
     <content type="html">&lt;p&gt;When I’m using Windows 10 I am sometimes facing the problem that I can’t right click on my taskbar icons, but I found few solutions on how to fix it.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;PS: This works on windows 7 and 8 as well&lt;/em&gt;&lt;/p&gt;
@@ -157,9 +157,9 @@ Right-click anything in your taskbar to see if the fix has been effective.&lt;/p
   
   <entry>
     <title>Create gists from Command Line</title>
-    <link href="https://xela.isfucking.cool/blog/en/create-gist-from-cli"/>
+    <link href="http://localhost:4000/blog/en/create-gist-from-cli"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/create-gist-from-cli</id>
+    <id>http://localhost:4000/blog/en/create-gist-from-cli</id>
     <content type="html">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
 &lt;p&gt;1.
@@ -190,9 +190,9 @@ Create a &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;Personal A
   
   <entry>
     <title>Welcome</title>
-    <link href="https://xela.isfucking.cool/blog/en/welcome"/>
+    <link href="http://localhost:4000/blog/en/welcome"/>
     <updated>2018-08-06T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/welcome</id>
+    <id>http://localhost:4000/blog/en/welcome</id>
     <content type="html">&lt;p&gt;Hello!&lt;/p&gt;
 
 &lt;p&gt;Welcome to my blog.
