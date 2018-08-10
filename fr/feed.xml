@@ -3,7 +3,7 @@
   <title>Nouvelles et mises à jour | Xela's Blog</title>
   <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
   <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-10T23:30:15+02:00</updated>
+  <updated>2018-08-11T00:05:08+02:00</updated>
   <id>https://xela.isfucking.cool/</id>
   <author>
     <name></name>
@@ -388,7 +388,7 @@ Mais gardez à l’esprit que même si cette méthode fonctionne, elle devrait �
   &lt;li&gt;Dans le &lt;strong&gt;Gestionnaire de tâches&lt;/strong&gt;, localisez le processus &lt;strong&gt;Windows Explorer&lt;/strong&gt;, &lt;strong&gt;cliquez avec le bouton droit&lt;/strong&gt; dessus et choisissez &lt;strong&gt;Redémarrer&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uoiR4UT.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/fix-right-click-on-taskbar-icons-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Voyez maintenant si le correctif a été efficace en cliquant avec le bouton droit de la souris sur un icône dans la barre des tâches.&lt;/p&gt;
 
@@ -397,7 +397,7 @@ Mais gardez à l’esprit que même si cette méthode fonctionne, elle devrait �
 &lt;p&gt;1.
 Appuyez sur la touche &lt;strong&gt;Windows + R&lt;/strong&gt; pour ouvrir la fenêtre exécuter. Ensuite, tapez “&lt;strong&gt;services.msc&lt;/strong&gt;” et appuyez sur &lt;strong&gt;Entrée&lt;/strong&gt;** pour ouvrir la fenêtre Services.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/A80WF3a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/fix-right-click-on-taskbar-icons-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2.
 Dans la fenêtre &lt;strong&gt;Services&lt;/strong&gt;, faites défiler la liste &lt;strong&gt;Services locaux&lt;/strong&gt; et localisez &lt;strong&gt;Serveur de modèle de données&lt;/strong&gt;.&lt;/p&gt;
@@ -405,7 +405,7 @@ Dans la fenêtre &lt;strong&gt;Services&lt;/strong&gt;, faites défiler la liste
 &lt;p&gt;3.
 Cliquez avec le bouton droit de la souris sur &lt;strong&gt;Serveur de modèle de données&lt;/strong&gt; et choisissez &lt;strong&gt;Redémarrer&lt;/strong&gt;, puis attendez que le service soit redémarré.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Ul6NYUw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/fix-right-click-on-taskbar-icons-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;4.
 Cliquez avec le bouton droit de la souris sur n’importe quoi dans votre barre des tâches pour voir si la solution a été efficace.&lt;/p&gt;

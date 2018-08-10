@@ -3,7 +3,7 @@
   <title>News 'n' Updates | Xela's Blog</title>
   <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
   <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-10T23:30:15+02:00</updated>
+  <updated>2018-08-11T00:05:08+02:00</updated>
   <id>https://xela.isfucking.cool/</id>
   <author>
     <name></name>
@@ -396,7 +396,7 @@ But keep in mind that even if this method works, it should be considered a worka
   &lt;li&gt;In &lt;strong&gt;Task Manager&lt;/strong&gt;, locate the &lt;strong&gt;Windows Explorer&lt;/strong&gt; process, &lt;strong&gt;right-click&lt;/strong&gt; on it and choose &lt;strong&gt;Restart&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uoiR4UT.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/fix-right-click-on-taskbar-icons-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now see whether the fix was effective by right-clicking an icon on your taskbar.&lt;/p&gt;
 
@@ -405,7 +405,7 @@ But keep in mind that even if this method works, it should be considered a worka
 &lt;p&gt;1.
 Press &lt;strong&gt;Windows Key + R&lt;/strong&gt; to open up a Run command. Then, type “&lt;strong&gt;services.msc&lt;/strong&gt;” and hit &lt;strong&gt;Enter&lt;/strong&gt; to open the Services window.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/A80WF3a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/fix-right-click-on-taskbar-icons-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2.
 In the &lt;strong&gt;Services&lt;/strong&gt; window, scroll through the &lt;strong&gt;Local Services&lt;/strong&gt; list and locate &lt;strong&gt;Tile Data model server&lt;/strong&gt;.&lt;/p&gt;
@@ -413,7 +413,7 @@ In the &lt;strong&gt;Services&lt;/strong&gt; window, scroll through the &lt;stro
 &lt;p&gt;3.
 Right-click on &lt;strong&gt;Tile Data model server&lt;/strong&gt; and choose &lt;strong&gt;Restart&lt;/strong&gt;, then wait for the service to be restarted.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Ul6NYUw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/fix-right-click-on-taskbar-icons-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;4.
 Right-click anything in your taskbar to see if the fix has been effective.&lt;/p&gt;
