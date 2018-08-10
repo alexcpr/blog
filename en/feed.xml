@@ -3,12 +3,279 @@
   <title>News 'n' Updates | Xela's Blog</title>
   <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
   <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-10T16:47:40+02:00</updated>
+  <updated>2018-08-10T23:14:09+02:00</updated>
   <id>https://xela.isfucking.cool/</id>
   <author>
     <name></name>
   </author>
 
+  
+  
+  
+  
+  <entry>
+    <title>Stop using XMLHttpRequest and switch to fetch</title>
+    <link href="https://xela.isfucking.cool/blog/en/fetch-api"/>
+    <updated>2018-08-10T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/en/fetch-api</id>
+    <content type="html">&lt;p&gt;The most popular XHR API is &lt;code&gt;XMLHttpRequest&lt;/code&gt; which wasn’t really made for what we’ve been using it for. That’s why &lt;code&gt;fetch&lt;/code&gt; API has been created, the &lt;code&gt;fetch&lt;/code&gt; API is in some sort a modern replacement for &lt;code&gt;XMLHttpRequest&lt;/code&gt;. Let’s have a basic look at this &lt;code&gt;window.fetch&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;h2 id=&quot;browser-compatibility&quot;&gt;Browser compatibility&lt;/h2&gt;
+
+&lt;p&gt;An important thing while developing a web application is the browser compatibility with the technologies used. As &lt;code&gt;XMLHttpRequest&lt;/code&gt; is older it logically have a better compatibility with older browsers compared to &lt;code&gt;fetch&lt;/code&gt; however, there is well done &lt;code&gt;fetch&lt;/code&gt; polyfill’s which makes this modern API compatible with older browsers such as IE, etc…&lt;/p&gt;
+
+&lt;p&gt;(c.f &lt;a href=&quot;https://caniuse.com/#search=XMLHttpRequest&quot;&gt;XMLHttpRequest Compatibility&lt;/a&gt;, &lt;a href=&quot;https://caniuse.com/#search=Fetch&quot;&gt;Fetch Compatibility&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-xmlhttprequest-usage&quot;&gt;Basic &lt;code&gt;XMLHttpRequest&lt;/code&gt; Usage&lt;/h2&gt;
+
+&lt;p&gt;XHR is a bit overcomplicated in my opinion and I still don’t understand why &lt;code&gt;XML&lt;/code&gt; is uppercase while &lt;code&gt;Http&lt;/code&gt; is camel-cased, it doesn’t make any sense at all. Anyways, here’s a common XHR usage&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (window.XMLHttpRequest) { // Mozilla, Safari, etc...
+request = new XMLHttpRequest();
+} else if (window.ActiveXObject) { // IE
+try {
+    request = new ActiveXObject('Msxml2.XMLHTTP');
+} 
+catch (e) {
+    try {
+    request = new ActiveXObject('Microsoft.XMLHTTP');
+    } 
+    catch (e) {}
+}
+}
+
+// Open the request and send it.
+request.open('GET', 'https://example.com/api', true);
+request.send(null);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Of course JavaScript frameworks make XHR more pleasant to work with, but what you see above is a “&lt;strong&gt;simple&lt;/strong&gt;” example of the most basic XHR usage. XHR is a real mess.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-fetch-usage&quot;&gt;Basic &lt;code&gt;fetch&lt;/code&gt; Usage&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;fetch&lt;/code&gt; function is provided in the global &lt;code&gt;window&lt;/code&gt; scope, with the first argument being the URL (required) and the second the options (optional)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// fetch(url, options) | url: required - options: optional
+fetch('https://example.com/api', {
+    method: 'get'
+}).then(function(response) {
+    // Success :)
+}).catch(function(err) {
+    // Error :(
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And as you can see &lt;code&gt;fetch&lt;/code&gt; uses &lt;strong&gt;Javascript Promises&lt;/strong&gt; in order to handle results/callbacks. If you aren’t used to &lt;strong&gt;Javascript Promises&lt;/strong&gt; yet, get used to it – it will soon be everywhere.&lt;/p&gt;
+
+&lt;h2 id=&quot;request-headers&quot;&gt;Request Headers&lt;/h2&gt;
+
+&lt;p&gt;The ability to set request headers is important in request flexibility, you can work with request headers by executing &lt;code&gt;new Headers()&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Create an empty Headers instance
+const headers = new Headers();
+
+// Add headers
+headers.append('Custom-Header', 'MySuperValue');
+headers.append('Content-Type', 'text/html');
+
+// Check if this header is present
+headers.has('Content-Type'); // true
+headers.has('Some-Header'); // false
+
+// Get the value of a specific header
+headers.get('Custom-Header'); // MySuperValue
+
+// Set a new value for an existing header
+headers.set('Content-Type', 'text/plain');
+
+// Delete a header
+headers.delete('Custom-Header');
+
+// Add initial values
+const headers = new Headers({
+    'Content-Type': 'application/json',
+    'User-Agent': 'MySuperUserAgent'
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In order to use request headers, you must first create a new &lt;code&gt;Request&lt;/code&gt; instance&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const request = new Request('https://example.com/api', {
+    headers: new Headers({
+        'Content-Type': 'application/json',
+        'User-Agent': 'MyCustomUserAgent'
+    })
+});
+
+fetch(request).then(function(response) {
+    // process the response
+}).catch(function(error) {
+    // process the error
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;request&quot;&gt;Request&lt;/h2&gt;
+
+&lt;p&gt;A &lt;code&gt;Request&lt;/code&gt; instance represents the request piece of a &lt;code&gt;fetch&lt;/code&gt; call. By passing &lt;code&gt;fetch&lt;/code&gt; a &lt;code&gt;Request&lt;/code&gt; you can make advanced and customized requests:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;method&lt;/code&gt; - &lt;strong&gt;GET&lt;/strong&gt;, &lt;strong&gt;HEAD&lt;/strong&gt;, &lt;strong&gt;POST&lt;/strong&gt;, &lt;strong&gt;PUT&lt;/strong&gt;, &lt;strong&gt;DELETE&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;url&lt;/code&gt; - &lt;strong&gt;URL&lt;/strong&gt; of the request&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;headers&lt;/code&gt; - associated &lt;strong&gt;Headers&lt;/strong&gt; object&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;referrer&lt;/code&gt; - referrer of the request&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;mode&lt;/code&gt; - &lt;strong&gt;cors&lt;/strong&gt;, &lt;strong&gt;no-cors&lt;/strong&gt;, &lt;strong&gt;same-origin&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;credentials&lt;/code&gt; - should cookies go with the request? &lt;strong&gt;omit&lt;/strong&gt;, &lt;strong&gt;same-origin&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;redirect&lt;/code&gt; - &lt;strong&gt;follow&lt;/strong&gt;, &lt;strong&gt;error&lt;/strong&gt;, &lt;strong&gt;manual&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;integrity&lt;/code&gt; - subresource integrity value&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;cache&lt;/code&gt; - cache mode (&lt;strong&gt;default&lt;/strong&gt;, &lt;strong&gt;reload&lt;/strong&gt;, &lt;strong&gt;no-cache&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here’s a sample of &lt;code&gt;Request&lt;/code&gt; usage&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Build the request
+const request = new Request('https://example.com/anything', {
+    method: 'HEAD', 
+    mode: 'no-cors', 
+    redirect: 'follow',
+    headers: new Headers({
+        'Content-Type': 'text/html'
+    })
+});
+
+// And now use the request
+fetch(request).then(function() {
+    // handle response 
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Only the first parameter, the URL, is required. Each property becomes read only once the &lt;code&gt;Request&lt;/code&gt; instance has been created. Also important to note that &lt;code&gt;Request&lt;/code&gt; has a clone method which is important when using &lt;code&gt;fetch&lt;/code&gt; within the Service Worker API – a &lt;code&gt;Request&lt;/code&gt; is a stream and thus must be cloned when passing to another &lt;code&gt;fetch&lt;/code&gt; call.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/anything', {
+    method: 'HEAD', 
+    mode: 'no-cors', 
+    redirect: 'follow',
+    headers: new Headers({
+        'Content-Type': 'text/html'
+    })
+}).then(function() {
+    // handle response 
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You’ll likely only use Request instances within Service Workers since the Request and fetch signatures can be the same.&lt;/p&gt;
+
+&lt;h2 id=&quot;response&quot;&gt;Response&lt;/h2&gt;
+
+&lt;p&gt;The fetch’s then method is provided a Response instance but you can also manually create Response objects yourself – another situation you may encounter when using service workers. With a Response you can configure:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;type&lt;/code&gt; - &lt;strong&gt;basic&lt;/strong&gt;, &lt;strong&gt;cors&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;url&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;useFinalURL&lt;/code&gt; - Boolean for if &lt;strong&gt;url&lt;/strong&gt; is the final URL&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;status&lt;/code&gt; - status code (ex: &lt;strong&gt;200&lt;/strong&gt;, &lt;strong&gt;404&lt;/strong&gt;, etc.)&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ok&lt;/code&gt; - Boolean for successful response (status in the range 200-299)&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;statusText&lt;/code&gt; - status code (ex: &lt;strong&gt;OK&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;headers&lt;/code&gt; - Headers object associated with the response.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;// Fake response for service worker testing -- new Response(body, options)
+const response = new Response('response body', {
+	ok: false,
+	status: 404,
+	url: '/'
+});
+
+// The fetch's then gets a Response instance back
+fetch('https://exemple.com/').then(function(response) {
+	console.log('ok: ', response.ok); // false
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;Response&lt;/code&gt; also provides the following methods:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;clone()&lt;/code&gt; Creates a clone of a Response object&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;error()&lt;/code&gt; Returns a new Response object associated with a network error&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;redirect()&lt;/code&gt; Creates a new response with a different URL&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;arrayBuffer()&lt;/code&gt; Returns a promise that resolves with an ArrayBuffer&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;blob()&lt;/code&gt; Returns a promise that resolves with a Blob&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;formData()&lt;/code&gt; Returns a promise that resolves with a FormData object&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;json()&lt;/code&gt; Returns a promise that resolves with a JSON object&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;text()&lt;/code&gt; Returns a promise that resolves with a USVString (text)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;handling-json&quot;&gt;Handling JSON&lt;/h2&gt;
+
+&lt;p&gt;Let’s say you make a request for JSON, the resulting callback data has a json method for converting the raw data to a JavaScript object&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/api/list.json').then(function(response) { 
+    // Convert to JSON
+    return response.json();
+}).then(function(jsObj) {
+    // jsObj is an javascript object from the json response
+    console.log(jsObj); 
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;json()&lt;/code&gt; method is a simple shortcut to &lt;code&gt;JSON.parse(jsonString)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;handling-basic-texthtml-responses&quot;&gt;Handling Basic Text/HTML Responses&lt;/h2&gt;
+
+&lt;p&gt;JSON isn’t always the desired request response format so here’s how you can work with an HTML or text response&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('/404').then(function(response) {
+    return response.text();
+}).then(function(htmlresponse) { 
+    // &amp;lt;!DOCTYPE ....
+    console.log(htmlresponse); 
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can get the response text via chaining the Promise’s &lt;code&gt;then&lt;/code&gt; method along with the &lt;code&gt;text()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;h2 id=&quot;handling-blob-responses&quot;&gt;Handling Blob Responses&lt;/h2&gt;
+
+&lt;p&gt;For example, loading image via fetch its a bit different&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/someimage.jpg').then(function(response) {
+    return response.blob();
+})
+.then(function(imageBlob) {
+    document.querySelector('img').src = URL.createObjectURL(imageBlob);
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;blob()&lt;/code&gt; method of the Body mixing takes a Response stream and reads it to completion.&lt;/p&gt;
+
+&lt;h2 id=&quot;posting-form-data&quot;&gt;Posting Form Data&lt;/h2&gt;
+
+&lt;p&gt;AJAX is used a lot for sending form data, here’s how you would do it with the use of fetch&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/submit', {
+    method: 'post',
+    body: new FormData(document.getElementById('myForm'))
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And if you want to post some JSON data&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/submit', {
+    method: 'post',
+    body: JSON.stringify({
+        some: document.querySelector('#some').value,
+        json: document.querySelector('#json').value,
+        data: document.querySelector('#data').value
+    })
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Simple as that!&lt;/p&gt;
+
+&lt;h2 id=&quot;polyfill&quot;&gt;Polyfill&lt;/h2&gt;
+
+&lt;p&gt;There is a lot of Polyfill’s for fetch method, but I highly suggest you to check the &lt;a href=&quot;https://github.com/github/fetch&quot;&gt;GitHub&lt;/a&gt; one.&lt;/p&gt;
+</content>
+  </entry>
+  
   
   
   
@@ -181,22 +448,6 @@ Create a &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;Personal A
 &lt;p&gt;Now you can just run &lt;code&gt;gist-diff&lt;/code&gt; command in order to create a gist with the content of &lt;code&gt;git diff&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;gist-diff&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;When &lt;code&gt;gist-diff&lt;/code&gt; has created the gist it will open the gist URL in your browser.&lt;/p&gt;
-</content>
-  </entry>
-  
-  
-  
-  
-  
-  <entry>
-    <title>Welcome</title>
-    <link href="https://xela.isfucking.cool/blog/en/welcome"/>
-    <updated>2018-08-06T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/welcome</id>
-    <content type="html">&lt;p&gt;Hello!&lt;/p&gt;
-
-&lt;p&gt;Welcome to my blog.
-I am Xela a developer which decided to create a blog to share knowledge and things that I discover.&lt;/p&gt;
 </content>
   </entry>
   
