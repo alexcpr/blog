@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>News 'n' Updates | Xela's Blog</title>
+  <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
+  <link href="https://xela.isfucking.cool/"/>
+  <updated>2018-08-10T15:57:45+02:00</updated>
+  <id>https://xela.isfucking.cool/</id>
+  <author>
+    <name></name>
+  </author>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <entry>
+    <title>Page load time counter in JS</title>
+    <link href="https://xela.isfucking.cool/blog/en/page-load-time-counter"/>
+    <updated>2018-08-07T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/en/page-load-time-counter</id>
+    <content type="html">&lt;p&gt;What I would like to see on websites is a little counter of the page load time placed in the footer, so I decided to share you the little piece of code in order to easily integrate this counter in your website footer.&lt;/p&gt;
+
+&lt;p&gt;ES5 Version (Older browsers)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(function() {
+  var t = window.performance &amp;amp;&amp;amp; performance.timing;
+  if (!t) {
+    return;
+  }
+  var loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
+  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
+})();&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ES6 Version (Modern browsers)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(function(){
+  const t = window.performance &amp;amp;&amp;amp; performance.timing;
+  if (!t) {
+    return;
+  }
+  const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
+  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
+}())&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  
+  
+  
+  <entry>
+    <title>How to make a Google button with CSS</title>
+    <link href="https://xela.isfucking.cool/blog/en/how-to-make-a-google-button"/>
+    <updated>2018-08-07T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/en/how-to-make-a-google-button</id>
+    <content type="html">&lt;p&gt;I personally like the google buttons design, they are simple, lightweight and modern at the same time. So I decided to reproduce the google buttons design myself with some CSS.&lt;/p&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;style&gt;.button{display:inline-block;background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);-moz-border-radius:2px;-moz-user-select:none;background-color:#f2f2f2;color:#757575;width:152px;font-family:arial,sans-serif;font-size:13px;border:1px solid #f2f2f2;border-radius:2px;cursor:default;font-weight:700;text-align:center;line-height:27px;min-width:54px;padding:0 16px;text-decoration:none}.button:hover{background-color:#f8f8f8;background-image:linear-gradient(top,#f8f8f8,#f1f1f1);border:1px solid #c6c6c6;color:#333;box-shadow:0 1px 1px rgba(0,0,0,.1)}.button.default:active{box-shadow:inset 0 1px 2px rgba(0,0,0,.1);color:#000}&lt;/style&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;google button&quot;&gt;Google Search&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;google-button-source-code&quot;&gt;Google button Source Code&lt;/h2&gt;
+
+&lt;p&gt;HTML&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;google button&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Google Search&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;CSS (775 bytes uncompressed)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.button {
+	display: inline-block;
+	background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+	-moz-border-radius: 2px;
+	-moz-user-select: none;
+	background-color: #f2f2f2;
+	color: #757575;
+	width: 152px;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	border: 1px solid #f2f2f2;
+	border-radius: 2px;
+	cursor: default;
+	font-weight: 700;
+	text-align: center;
+	line-height: 27px;
+	min-width: 54px;
+	padding: 0 16px;
+	text-decoration: none
+}
+.button:hover {
+	background-color: #f8f8f8;
+	background-image: linear-gradient(top, #f8f8f8, #f1f1f1);
+	border: 1px solid #c6c6c6;
+	color: #333;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .1)
+}
+.button.default:active {
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	color: #000
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And that’s it!&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Fix right click on taskbar icons</title>
+    <link href="https://xela.isfucking.cool/blog/en/fix-right-click-on-taskbar-icons"/>
+    <updated>2018-08-07T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/en/fix-right-click-on-taskbar-icons</id>
+    <content type="html">&lt;p&gt;When I’m using Windows 10 I am sometimes facing the problem that I can’t right click on my taskbar icons, but I found few solutions on how to fix it.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;PS: This works on windows 7 and 8 as well&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-1--using-shift--right-click&quot;&gt;Solution 1 : Using Shift + right-click&lt;/h2&gt;
+
+&lt;p&gt;All you have to do is to hold &lt;strong&gt;shift key&lt;/strong&gt; while right clicking any icon on your taskbar and after that you will be able to right click normally on your taskbar icons.
+But keep in mind that even if this method works, it should be considered a workaround rather than a fix.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-2--restart-the-windows-explorer&quot;&gt;Solution 2 : Restart the Windows Explorer&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Press &lt;strong&gt;Ctrl + Shift + Esc&lt;/strong&gt; to open up &lt;strong&gt;Task Manager&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;In &lt;strong&gt;Task Manager&lt;/strong&gt;, locate the &lt;strong&gt;Windows Explorer&lt;/strong&gt; process, &lt;strong&gt;right-click&lt;/strong&gt; on it and choose &lt;strong&gt;Restart&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uoiR4UT.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now see whether the fix was effective by right-clicking an icon on your taskbar.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-3--restarting-the-tile-data-model-server&quot;&gt;Solution 3 : Restarting the Tile Data model server&lt;/h2&gt;
+
+&lt;p&gt;1.
+Press &lt;strong&gt;Windows Key + R&lt;/strong&gt; to open up a Run command. Then, type “&lt;strong&gt;services.msc&lt;/strong&gt;” and hit &lt;strong&gt;Enter&lt;/strong&gt; to open the Services window.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/A80WF3a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.
+In the &lt;strong&gt;Services&lt;/strong&gt; window, scroll through the &lt;strong&gt;Local Services&lt;/strong&gt; list and locate &lt;strong&gt;Tile Data model server&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;3.
+Right-click on &lt;strong&gt;Tile Data model server&lt;/strong&gt; and choose &lt;strong&gt;Restart&lt;/strong&gt;, then wait for the service to be restarted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Ul6NYUw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4.
+Right-click anything in your taskbar to see if the fix has been effective.&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Create gists from Command Line</title>
+    <link href="https://xela.isfucking.cool/blog/en/create-gist-from-cli"/>
+    <updated>2018-08-07T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/en/create-gist-from-cli</id>
+    <content type="html">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;1.
+Install &lt;code&gt;pretty-diff&lt;/code&gt; npm package&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g pretty-diff&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.
+Add your github username into git global configuration&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global github.user &quot;YourGitHubUsernameHere&quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.
+Create a &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;Personal Access Token&lt;/a&gt; (don’t forget to check the “Create gist” checkbox) in order to &lt;code&gt;pretty-diff&lt;/code&gt; to work. Once you have created the token, run this command&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global gist-diff.token &quot;YourPersonalAccessTokenHere&quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you’re ready to use &lt;code&gt;gist-diff&lt;/code&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-gist&quot;&gt;Creating a Gist&lt;/h2&gt;
+
+&lt;p&gt;Now you can just run &lt;code&gt;gist-diff&lt;/code&gt; command in order to create a gist with the content of &lt;code&gt;git diff&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gist-diff&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When &lt;code&gt;gist-diff&lt;/code&gt; has created the gist it will open the gist URL in your browser.&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  <entry>
+    <title>Welcome</title>
+    <link href="https://xela.isfucking.cool/blog/en/welcome"/>
+    <updated>2018-08-06T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/en/welcome</id>
+    <content type="html">&lt;p&gt;Hello!&lt;/p&gt;
+
+&lt;p&gt;Welcome to my blog.
+I am Xela a developer which decided to create a blog to share knowledge and things that I discover.&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+</feed>

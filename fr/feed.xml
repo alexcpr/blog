@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Nouvelles et mises à jour | Xela's Blog</title>
+  <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
+  <link href="https://xela.isfucking.cool/"/>
+  <updated>2018-08-10T15:57:45+02:00</updated>
+  <id>https://xela.isfucking.cool/</id>
+  <author>
+    <name></name>
+  </author>
+
+  
+  
+  <entry>
+    <title>Compteur de temps de chargement d'une page en JS</title>
+    <link href="https://xela.isfucking.cool/blog/fr/page-load-time-counter"/>
+    <updated>2018-08-07T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/fr/page-load-time-counter</id>
+    <content type="html">&lt;p&gt;Ce que j’aimerais voir sur les sites web est un petit compteur du temps de chargement de la page placé dans le footer de la page, alors j’ai décidé de vous partager le petit morceau de code afin d’intégrer facilement ce compteur dans le footer sur votre site web.&lt;/p&gt;
+
+&lt;p&gt;Version ES5 (Navigateurs anciens)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(function() {
+  var t = window.performance &amp;amp;&amp;amp; performance.timing;
+  if (!t) {
+    return;
+  }
+  var loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
+  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
+})();&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ES6 Version (Navigateurs modernes)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(function(){
+  const t = window.performance &amp;amp;&amp;amp; performance.timing;
+  if (!t) {
+    return;
+  }
+  const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
+  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
+}())&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Comment faire un bouton Google avec du CSS</title>
+    <link href="https://xela.isfucking.cool/blog/fr/how-to-make-a-google-button"/>
+    <updated>2018-08-07T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/fr/how-to-make-a-google-button</id>
+    <content type="html">&lt;p&gt;Personnellement, j’aime le design des boutons google, ils sont simples, légers et modernes à la fois. J’ai donc décidé de reproduire moi-même le design des boutons google avec du CSS.&lt;/p&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+
+&lt;style&gt;.button{display:inline-block;background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);-moz-border-radius:2px;-moz-user-select:none;background-color:#f2f2f2;color:#757575;width:152px;font-family:arial,sans-serif;font-size:13px;border:1px solid #f2f2f2;border-radius:2px;cursor:default;font-weight:700;text-align:center;line-height:27px;min-width:54px;padding:0 16px;text-decoration:none}.button:hover{background-color:#f8f8f8;background-image:linear-gradient(top,#f8f8f8,#f1f1f1);border:1px solid #c6c6c6;color:#333;box-shadow:0 1px 1px rgba(0,0,0,.1)}.button.default:active{box-shadow:inset 0 1px 2px rgba(0,0,0,.1);color:#000}&lt;/style&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;google button&quot;&gt;Recherche Google&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;google-button-source-code&quot;&gt;Google button Source Code&lt;/h2&gt;
+
+&lt;p&gt;HTML&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;google button&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Recherche Googleh&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;CSS (775 octets non compressés)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.button {
+	display: inline-block;
+	background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+	-moz-border-radius: 2px;
+	-moz-user-select: none;
+	background-color: #f2f2f2;
+	color: #757575;
+	width: 152px;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	border: 1px solid #f2f2f2;
+	border-radius: 2px;
+	cursor: default;
+	font-weight: 700;
+	text-align: center;
+	line-height: 27px;
+	min-width: 54px;
+	padding: 0 16px;
+	text-decoration: none
+}
+.button:hover {
+	background-color: #f8f8f8;
+	background-image: linear-gradient(top, #f8f8f8, #f1f1f1);
+	border: 1px solid #c6c6c6;
+	color: #333;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .1)
+}
+.button.default:active {
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	color: #000
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et c’est tout !&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Réparer le clic droit sur les icônes de la barre des tâches</title>
+    <link href="https://xela.isfucking.cool/blog/fr/fix-right-click-on-taskbar-icons"/>
+    <updated>2018-08-07T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/fr/fix-right-click-on-taskbar-icons</id>
+    <content type="html">&lt;p&gt;Quand j’utilise Windows 10, je suis parfois confronté au problème que je ne peux pas faire un clic droit sur mes icônes de la barre des tâches, mais j’ai trouvé quelques solutions pour résoudre cela.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NB: Cela fonctionne également sur Windows 7 et 8.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-1--utilisation-de-maj--clic-droit&quot;&gt;Solution 1 : Utilisation de Maj + clic droit&lt;/h2&gt;
+
+&lt;p&gt;Tout ce que vous avez à faire est de maintenir la touche &lt;strong&gt;Maj&lt;/strong&gt; tout en faisant un clic droit sur n’importe quelle icône de votre barre des tâches et après cela, vous pourrez faire un clic droit normalement sur les icônes de votre barre des tâches.
+Mais gardez à l’esprit que même si cette méthode fonctionne, elle devrait être considérée comme une solution de contournement plutôt qu’un correctif.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-2--redémarrer-lexplorateur-windows&quot;&gt;Solution 2 : Redémarrer l’Explorateur Windows&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Appuyez sur &lt;strong&gt;Ctrl + Maj + Esc&lt;/strong&gt; pour ouvrir le &lt;strong&gt;Gestionnaire de tâches&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Dans le &lt;strong&gt;Gestionnaire de tâches&lt;/strong&gt;, localisez le processus &lt;strong&gt;Windows Explorer&lt;/strong&gt;, &lt;strong&gt;cliquez avec le bouton droit&lt;/strong&gt; dessus et choisissez &lt;strong&gt;Redémarrer&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/uoiR4UT.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Voyez maintenant si le correctif a été efficace en cliquant avec le bouton droit de la souris sur un icône dans la barre des tâches.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-3--redémarrage-du-service-serveur-de-modèle-de-données&quot;&gt;Solution 3 : Redémarrage du service Serveur de modèle de données&lt;/h2&gt;
+
+&lt;p&gt;1.
+Appuyez sur la touche &lt;strong&gt;Windows + R&lt;/strong&gt; pour ouvrir la fenêtre exécuter. Ensuite, tapez “&lt;strong&gt;services.msc&lt;/strong&gt;” et appuyez sur &lt;strong&gt;Entrée&lt;/strong&gt;** pour ouvrir la fenêtre Services.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/A80WF3a.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.
+Dans la fenêtre &lt;strong&gt;Services&lt;/strong&gt;, faites défiler la liste &lt;strong&gt;Services locaux&lt;/strong&gt; et localisez &lt;strong&gt;Serveur de modèle de données&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;3.
+Cliquez avec le bouton droit de la souris sur &lt;strong&gt;Serveur de modèle de données&lt;/strong&gt; et choisissez &lt;strong&gt;Redémarrer&lt;/strong&gt;, puis attendez que le service soit redémarré.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Ul6NYUw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4.
+Cliquez avec le bouton droit de la souris sur n’importe quoi dans votre barre des tâches pour voir si la solution a été efficace.&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Créer des gists en ligne de commande</title>
+    <link href="https://xela.isfucking.cool/blog/fr/create-gist-from-cli"/>
+    <updated>2018-08-07T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/fr/create-gist-from-cli</id>
+    <content type="html">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;1.
+Installer le paquet npm &lt;code&gt;pretty-diff&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g pretty-diff&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;2.
+Ajoutez votre nom d’utilisateur github dans la configuration globale de git&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global github.user &quot;VotreNomDutilisateurGitHubIci&quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3.
+Créez un &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;jeton d’accès personnel&lt;/a&gt; (n’oubliez pas de cocher la case “Créer un gist”) afin de faire fonctionner &lt;code&gt;pretty-diff&lt;/code&gt;. Une fois que vous avez créé le jeton, exécutez cette commande&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global gist-diff.token &quot;YourPersonalAccessTokenHere&quot;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vous êtes maintenant prêt à utiliser &lt;code&gt;gist-diff&lt;/code&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;créer-un-gist&quot;&gt;Créer un Gist&lt;/h2&gt;
+
+&lt;p&gt;Maintenant vous pouvez simplement exécuter la commande &lt;code&gt;gist-diff&lt;/code&gt; afin de créer un gist avec le contenu de &lt;code&gt;git diff&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gist-diff&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lorsque &lt;code&gt;gist-diff&lt;/code&gt; a créé le gist, il ouvrira l’URL du gist dans votre navigateur&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <entry>
+    <title>Bienvenue</title>
+    <link href="https://xela.isfucking.cool/blog/fr/welcome"/>
+    <updated>2018-08-06T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/fr/welcome</id>
+    <content type="html">&lt;p&gt;Bonjour !&lt;/p&gt;
+
+&lt;p&gt;Bienvenue sur mon blog.
+Je suis Xela un développeur qui a décidé de créer un blog pour partager les connaissances et les choses que je découvre.&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
+  
+</feed>
