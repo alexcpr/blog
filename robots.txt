@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /feed.xml
+Disallow: /LICENSE.txt
+Disallow: /README.md
+Disallow: /404.html
