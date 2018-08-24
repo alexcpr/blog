@@ -1,32 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://xela.isfucking.cool/</loc>
-  <lastmod>2018-08-10T18:35:03+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://xela.isfucking.cool/blog/en/welcome</loc>
+<lastmod>2018-08-06T00:00:00+02:00</lastmod>
 </url>
 <url>
-  <loc>https://xela.isfucking.cool/en</loc>
-  <lastmod>2018-08-10T18:35:03+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://xela.isfucking.cool/blog/fr/welcome</loc>
+<lastmod>2018-08-06T00:00:00+02:00</lastmod>
 </url>
 <url>
-  <loc>https://xela.isfucking.cool/fr</loc>
-  <lastmod>2018-08-10T18:35:03+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://xela.isfucking.cool/blog/en/create-gist-from-cli</loc>
+<lastmod>2018-08-07T00:00:00+02:00</lastmod>
 </url>
 <url>
-  <loc>https://xela.isfucking.cool/blog/en/welcome</loc>
-  <lastmod>2018-08-10T18:35:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://xela.isfucking.cool/blog/en/fix-right-click-on-taskbar-icons</loc>
+<lastmod>2018-08-07T00:00:00+02:00</lastmod>
 </url>
 <url>
-  <loc>https://xela.isfucking.cool/blog/fr/welcome</loc>
-  <lastmod>2018-08-10T18:35:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://xela.isfucking.cool/blog/en/how-to-make-a-google-button</loc>
+<lastmod>2018-08-07T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/blog/en/page-load-time-counter</loc>
+<lastmod>2018-08-07T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/blog/fr/create-gist-from-cli</loc>
+<lastmod>2018-08-07T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/blog/fr/fix-right-click-on-taskbar-icons</loc>
+<lastmod>2018-08-07T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/blog/fr/how-to-make-a-google-button</loc>
+<lastmod>2018-08-07T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/blog/fr/page-load-time-counter</loc>
+<lastmod>2018-08-07T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/blog/en/fetch-api</loc>
+<lastmod>2018-08-10T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/blog/fr/fetch-api</loc>
+<lastmod>2018-08-10T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/en.html</loc>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/fr.html</loc>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/en/</loc>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/fr/</loc>
+</url>
+<url>
+<loc>https://xela.isfucking.cool/</loc>
 </url>
 </urlset>
