@@ -3,7 +3,7 @@
   <title>Nouvelles et mises à jour | Xela's Blog</title>
   <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
   <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-24T00:26:56+02:00</updated>
+  <updated>2018-08-24T12:39:51+02:00</updated>
   <id>https://xela.isfucking.cool/</id>
   <author>
     <name></name>
@@ -395,7 +395,7 @@ Mais gardez à l’esprit que même si cette méthode fonctionne, elle devrait �
 &lt;h2 id=&quot;solution-3--redémarrage-du-service-serveur-de-modèle-de-données&quot;&gt;Solution 3 : Redémarrage du service Serveur de modèle de données&lt;/h2&gt;
 
 &lt;p&gt;1.
-Appuyez sur la touche &lt;strong&gt;Windows + R&lt;/strong&gt; pour ouvrir la fenêtre exécuter. Ensuite, tapez “&lt;strong&gt;services.msc&lt;/strong&gt;” et appuyez sur &lt;strong&gt;Entrée&lt;/strong&gt;** pour ouvrir la fenêtre Services.&lt;/p&gt;
+Appuyez sur la touche &lt;strong&gt;Windows + R&lt;/strong&gt; pour ouvrir la fenêtre exécuter. Ensuite, tapez “&lt;strong&gt;services.msc&lt;/strong&gt;” et appuyez sur &lt;strong&gt;Entrée&lt;/strong&gt; pour ouvrir la fenêtre Services.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/fix-right-click-on-taskbar-icons-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
