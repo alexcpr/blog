@@ -3,12 +3,177 @@
   <title>Nouvelles et mises à jour | Xela's Blog</title>
   <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
   <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-26T20:20:20+02:00</updated>
+  <updated>2018-08-29T00:25:10+02:00</updated>
   <id>https://xela.isfucking.cool/</id>
   <author>
     <name></name>
   </author>
 
+  
+  
+  <entry>
+    <title>Pourquoi w3schools est-il une mauvaise source d'information ?</title>
+    <link href="https://xela.isfucking.cool/blog/fr/why-is-w3schools-bad"/>
+    <updated>2018-08-29T00:00:00+02:00</updated>
+    <id>https://xela.isfucking.cool/blog/fr/why-is-w3schools-bad</id>
+    <content type="html">&lt;p&gt;En tant que développeur, j’utilise &lt;a href=&quot;https://discordapp.com/&quot;&gt;Discord&lt;/a&gt; tous les jours pour discuter avec des personnes et des amis au sujet de la programmation et je suis principalement dans des serveurs Discord en rapport à la programmation. J’ai surtout été dans un serveur Discord en particulier pendant quelques jours, serveur rassemblant environ 25.000 membres, et j’ai pu apercevoir des personnes partager des liens menants vers des tutoriels du site &lt;a href=&quot;https://www.w3schools.com/&quot;&gt;w3schools&lt;/a&gt;, site qui est une mauvaise source d’information pour apprendre à programmer. J’ai donc décidé d’alerter un administrateur pour qu’il fasse quelque chose à ce sujet et il m’avait répondu que les tutoriels provenant du site w3schools sont parfois désuets et que cela n’est pas un gros problème en soi. Cependant, il est clair que c’est un gros problème parce que, en tant que débutant, quand on apprend quelque chose et qu’on le fait tout le temps, il est difficile d’arrêter de le faire et encore plus si personne ne vous en avertit. Avec tout ce que nous savons sur les meilleures pratiques de développement web, la capacité de w3schools à rester connu nous déconcerte tous.&lt;/p&gt;
+
+&lt;p&gt;Je ne suis pas le premier à dire que w3schools est mauvais ni le dernier à écrire sur le sujet (&lt;a href=&quot;https://web.archive.org/web/20110412103745/http://w3fools.com&quot;&gt;cela a déjà été fait dans le passé&lt;/a&gt;). Le problème est que maintenant, ceux qui conseillent l’utilisation de w3schools commencent à dire que ce site a résolu leurs problèmes. Et bien je vais vous montrer qu’il ne les a pas tous résolus.&lt;/p&gt;
+
+&lt;h2 id=&quot;exemple-de-mauvaises-pratiques-que-w3schools-vous-fait-apprendre&quot;&gt;Exemple de mauvaises pratiques que w3schools vous fait apprendre&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML
+    &lt;ul&gt;
+      &lt;li&gt;Vous ne me croirez probablement pas, mais oui, w3schools recommande aux gens d’utiliser Notepad pour les utilisateurs de Windows et TextEdit pour les utilisateurs de Mac.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;« Les pages Web peuvent être créées et modifiées à l’aide d’éditeurs HTML professionnels.&lt;/p&gt;
+
+    &lt;p&gt;Cependant, pour apprendre le HTML, nous recommandons un éditeur de texte simple comme Notepad (PC) ou TextEdit (Mac).&lt;/p&gt;
+
+    &lt;p&gt;Nous croyons que l’utilisation d’un simple éditeur de texte est une bonne façon d’apprendre le HTML.&lt;/p&gt;
+
+    &lt;p&gt;Suivez les quatre étapes ci-dessous pour créer votre première page Web avec Notepad ou TextEdit. »&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/html/html_editors.asp&quot;&gt;Voyez par vous-même&lt;/a&gt;
+  &lt;em&gt;Qu’est-ce que les utilisateurs de Linux devraient utiliser alors ?&lt;/em&gt; 🤔&lt;/p&gt;
+
+    &lt;p&gt;Je recommande personnellement &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS Code&lt;/a&gt; ou &lt;a href=&quot;https://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; pour un éditeur de code simple. Pour un IDE, je recommande les &lt;a href=&quot;https://www.jetbrains.com/&quot;&gt;outils Jetbrains&lt;/a&gt;.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/html/html_formatting.asp&quot;&gt;tutoriel de formatage HTML&lt;/a&gt;, ils recommandent l’utilisation de la balise &lt;code&gt;&amp;#x3C;b&amp;#x3E;&lt;/code&gt; qui est maintenant obsolète et devrait être remplacée par du CSS.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/html/html_basic.asp&quot;&gt;tutoriel sur les bases du HTML&lt;/a&gt;, ils utilisent les attributs &lt;code&gt;width&lt;/code&gt; et &lt;code&gt;height&lt;/code&gt; dans une balise &lt;code&gt;&amp;#x3C;img&amp;#x3E;&lt;/code&gt; au lieu d’utiliser du CSS. A peine mieux ici, ils inline du style dans la balise &lt;code&gt;&amp;#x3C;img&amp;#x3E;&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/html/html_headings.asp&quot;&gt;tutoriel sur les éléments de titre HTML&lt;/a&gt;, ils utilisent l’attribut &lt;code&gt;style&lt;/code&gt; dans une balise &lt;code&gt;&amp;#x3C;h1&amp;#x3E;&lt;/code&gt;. Même dans leurs tutoriels “&lt;a href=&quot;https://www.w3schools.com/html/html_styles.asp&quot;&gt;style HTML&lt;/a&gt;” et “&lt;a href=&quot;https://www.w3schools.com/html/html_css.asp&quot;&gt;HTML CSS&lt;/a&gt;” ils le font.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/html/html_links.asp&quot;&gt;tutoriel des liens HTML&lt;/a&gt; montrant comment changer les couleurs par défaut de la balise &lt;code&gt;&amp;#x3C;a&amp;#x3E;&lt;/code&gt;, ils ont fait ceci&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;pre&gt;&lt;code&gt;&amp;#x3C;style&amp;#x3E;
+  a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+  }
+  a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+  }
+  a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+  }
+  a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+  }
+&amp;#x3C;/style&amp;#x3E;
+  &lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;em&gt;Notez que cette fois-ci ils ont utilisé une balise &lt;code&gt;&amp;#x3C;style&amp;#x3E;&lt;/code&gt; !&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;Bien qu’ils auraient pu le faire comme ça&lt;/p&gt;
+    &lt;pre&gt;&lt;code&gt;&amp;#x3C;style&amp;#x3E;
+  a {
+      text-decoration: none;
+      background-color: transparent
+  }
+  a:link {
+      color: green
+  }
+  a:visited {
+      color: pink
+  }
+  a:active,
+  a:hover {
+      color: red;
+      text-decoration: underline
+  }
+  a:active {
+      color: #ff0
+  }
+&amp;#x3C;/style&amp;#x3E;
+  &lt;/code&gt;&lt;/pre&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/html/html_layout.asp&quot;&gt;tutoriel de mise en page HTML&lt;/a&gt;, ils recommandent l’utilisation de &lt;code&gt;float&lt;/code&gt; au lieu de &lt;code&gt;flex&lt;/code&gt;, ne parlent même pas de &lt;code&gt;grid&lt;/code&gt; et, comme excuse, disent que &lt;code&gt;flex&lt;/code&gt; n’est pas supporté par IE10 et moins. 
+  &lt;img src=&quot;/images/ie11-desktop.png&quot; alt=&quot;&quot; /&gt;
+  &lt;img src=&quot;/images/ie11-mobile.png&quot; alt=&quot;&quot; /&gt;
+  IE 11 Desktop fonctionne bien, mais pas la version mobile. Flex fonctionne partiellement sur IE 11 comme le dit &lt;a href=&quot;https://caniuse.com/#search=flex&quot;&gt;caniuse&lt;/a&gt;. Cependant, ce n’est pas un vrai problème puisque IE ne représente que 2% de l’utilisation des navigateurs environ.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/html/html_responsive.asp&quot;&gt;tutoriel sur le design Responsive&lt;/a&gt;, ils utilisent l’attribut &lt;code&gt;&amp;#x3C;media&amp;#x3E;&lt;/code&gt; pour afficher différents contenus en fonction de la largeur du navigateur. Ne faites pas cela, utilisez plutôt les media queries dans un fichier CSS séparé.&lt;/li&gt;
+      &lt;li&gt;Ils ont un &lt;a href=&quot;https://www.w3schools.com/html/html_xhtml.asp&quot;&gt;tutoriel sur le XHTML&lt;/a&gt; qui est mort depuis HTML5.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CSS
+    &lt;ul&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/css/css3_mediaqueries.asp&quot;&gt;tutoriel CSS Media Queries&lt;/a&gt; et, ils utilisent l’attribut &lt;code&gt;&amp;#x3C;media&amp;#x3E;&lt;/code&gt; pour afficher différents contenus en fonction de la largeur du navigateur. Ne faites pas cela, utilisez plutôt les media queries dans un fichier CSS séparé.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;JavaScript
+    &lt;ul&gt;
+      &lt;li&gt;Dans tous leurs tutoriels, y compris leur &lt;a href=&quot;https://www.w3schools.com/js/js_variables.asp&quot;&gt;tutoriel sur les variables JavaScript&lt;/a&gt; et “&lt;a href=&quot;https://www.w3schools.com/js/js_best_practices.asp&quot;&gt;Meilleures pratiques JavaScript&lt;/a&gt;”, ils utilisent &lt;code&gt;var&lt;/code&gt; bien qu’aujourd’hui vous devriez utiliser &lt;code&gt;let&lt;/code&gt; ou &lt;code&gt;const&lt;/code&gt;. Dans ES2015, &lt;code&gt;let&lt;/code&gt; et &lt;code&gt;const&lt;/code&gt; ont été ajoutés et sont supportés par IE11 (IE11 représente presque 100% de l’utilisation actuelle d’IE). Vous pouvez écrire en ES2015 et convertir votre code en ES5 avec des outils tels que &lt;a href=&quot;https://babeljs.io/&quot;&gt;babel&lt;/a&gt;. &lt;em&gt;Et pour être honnête, de nos jours, vous pouvez développer en ES2015, car IE ne représente que 2% de l’utilisation des navigateurs environ.&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Dans tous leurs tutoriels, ils font de la concaténation bien qu’ils puissent faire de l’interpolation, ce qui est très facile en utilisant des modèles littéraux.&lt;/li&gt;
+      &lt;li&gt;Dans tous leurs tutoriels où ils comparent des variables, ils utilisent &lt;code&gt;==&lt;/code&gt; et &lt;code&gt;!=&lt;/code&gt; au lieu d’utiliser &lt;code&gt;===&lt;/code&gt; et &lt;code&gt;!==&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Dans tous leurs tutoriels, ils montrent le plus souvent des fonctions traditionnelles au lieu de fonctions fléchées, même lorsque cela a plus de sens.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb&quot;&gt;introduction à JavaScript&lt;/a&gt;, ils montrent comment JavaScript peut modifier les valeurs des attributs HTML. Le problème est qu’ils inline le code JavaScript à l’intérieur d’un attribut &lt;code&gt;onclick&lt;/code&gt;, ce qui est une mauvaise pratique, car ce n’est pas très lisible et c’est au même niveau qu’inline du CSS. Ils auraient dû utiliser une balise &lt;code&gt;&amp;#x3C;script&amp;#x3E;&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_whereto.asp&quot;&gt;tutoriel JavaScript Where To&lt;/a&gt;, ils ne mentionnent pas que lorsqu’on place du code JavaScript dans la balise &lt;code&gt;&amp;#x3C;head&amp;#x3E;&lt;/code&gt;, vous devez utiliser l’attribut &lt;code&gt;defer&lt;/code&gt; ou &lt;code&gt;async&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_output.asp&quot;&gt;tutoriel JavaScript Output&lt;/a&gt;, même s’ils ont averti que &lt;code&gt;document.write&lt;/code&gt; ne devrait être utilisé que pour le débogage, honnêtement, cela ne devrait même pas être mentionné.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_variables.asp&quot;&gt;tutoriel sur les variables JavaScript&lt;/a&gt;, il y a plusieurs exemples de rapports de plusieurs variables sur une même ligne sans assignation.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_operators.asp&quot;&gt;tutoriel sur les opérateurs JavaScript&lt;/a&gt;, ils ne mentionnent pas l’opérateur &lt;code&gt;**&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_datatypes.asp&quot;&gt;tutoriel sur les types de données JavaScript&lt;/a&gt;, ils disent : “Vous pouvez considérer que c’est un bug dans JavaScript que le type de null est un objet. Il devrait être null.” C’était un bug au début, mais ce texte pourrait faire penser, à tort, que ce comportement changera un jour.&lt;/li&gt;
+      &lt;li&gt;Pas de tutoriel/documentation sur l’API &lt;code&gt;fetch&lt;/code&gt; moderne seulement sur &lt;a href=&quot;https://www.w3schools.com/js/js_ajax_intro.asp&quot;&gt;XMLHttpRequest&lt;/a&gt;. &lt;em&gt;&lt;a href=&quot;https://xela.isfucking.cool/blog/fr/fetch-api&quot;&gt;Voyez pourquoi vous devriez utiliser fetch et non XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_objects.asp&quot;&gt;tutoriel sur les objets en JavaScript&lt;/a&gt;, ils auraient pu utiliser la syntaxe courte pour des créer une méthode dans un objet comme ceci&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;pre&gt;&lt;code&gt;{
+  firstName: &quot;John&quot;,
+  lastName : &quot;Doe&quot;,
+  id       : 1,
+  method() {
+      // code de la méthode ici
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_events.asp&quot;&gt;tutoriel sur les événements JavaScript&lt;/a&gt;, ils enseignent une mauvaise pratique consistant à utiliser des événements HTML au lieu d’utiliser des événements JavaScript avec la méthode &lt;code&gt;addEventListener&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_arrays.asp&quot;&gt;tutoriel sur les tableaux en JavaScript&lt;/a&gt;, ils auraient pu enseigner comment itérer sur un tableau comme ceci &lt;code&gt;for (const element of array) { ... }&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_hoisting.asp&quot;&gt;tutoriel JavaScript Hoisting&lt;/a&gt;, il serait beaucoup plus facile d’utiliser &lt;code&gt;let&lt;/code&gt; et &lt;code&gt;const&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_best_practices.asp&quot;&gt;tutoriel sur les meilleures pratiques en JavaScript&lt;/a&gt; les déclarations en haut sont maintenant une mauvaise pratique, &lt;code&gt;let&lt;/code&gt; et &lt;code&gt;const&lt;/code&gt; devraient être utilisés à la place. Utiliser les paramètres par défaut fait maintenant partie de la syntaxe.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_validation.asp&quot;&gt;tutoriel de validation JavaScript&lt;/a&gt;, &lt;code&gt;addEventListener&lt;/code&gt; devrait, encore une fois, être utilisé.&lt;/li&gt;
+      &lt;li&gt;Les classes JavaScript ne sont pas mentionnées.&lt;/li&gt;
+      &lt;li&gt;Les promesses JavaScript ne sont pas mentionnées.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PHP
+    &lt;ul&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/default.asp&quot;&gt;introduction à PHP&lt;/a&gt;, PHP5 est suffisant pour montrer à quel point le tutoriel est dépassé.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_install.asp&quot;&gt;tutoriel d’installation de PHP5&lt;/a&gt;, il n’y a pas vraiment d’explications sur la façon d’installer PHP, c’est comme dire “Regardez la doc et démerdez-vous avec elle, nous ne vous parlerons pas de php -S (serveur web interne php pour le développement)”.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_variables.asp&quot;&gt;tutoriel sur les variables en PHP&lt;/a&gt;, ils utilisent &lt;code&gt;&quot;&lt;/code&gt; par défaut au lieu de &lt;code&gt;'&lt;/code&gt; même sans interpolation. Ils utilisent des variables globales, ce qui est également une mauvaise pratique.&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_arrays.asp&quot;&gt;tutoriel sur les tableaux en PHP&lt;/a&gt;, ils utilisent l’ancienne syntaxe longue &lt;code&gt;array()&lt;/code&gt; bien qu’ils devraient utiliser la syntaxe courte &lt;code&gt;[]&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_ajax_intro.asp&quot;&gt;tutoriel AJAX en PHP&lt;/a&gt;, leurs codes JavaScript et PHP sont pleins de mauvaises pratiques et ils ne parlent même pas du fait que, de nos jours, vous devriez utiliser l’API &lt;code&gt;fetch&lt;/code&gt; à la place d’AJAX. &lt;em&gt;&lt;a href=&quot;https://xela.isfucking.cool/blog/fr/fetch-api&quot;&gt;Voyez pourquoi vous devriez utiliser fetch et non XMLHttp.&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Pas de tutoriel sur le hachage des mots de passe.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Bootstrap
+    &lt;ul&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/bootstrap/default.asp&quot;&gt;introduction a Bootstrap&lt;/a&gt;, ils utilisent Bootstrap 3, pas besoin d’aller plus loin.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;W3.JS
+    &lt;ul&gt;
+      &lt;li&gt;Leur bibliothèque &lt;a href=&quot;https://www.w3schools.com/w3js/default.asp&quot;&gt;W3.JS&lt;/a&gt; est lourde (12Ko) et ne fait pas beaucoup de choses. W3.JS est comme jQuery, lourd et inutile de nos jours, c’est pourquoi je ne recommande pas d’utiliser ces deux bibliothèques. En 2018, une bibliothèque qui permet d’interagir directement avec le DOM est assez anti-modèle maintenant qu’il existe des bibliothèques UX comme React ou VueJS.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pourquoi-le-site-w3schools-est-il-lui-même-mauvais-&quot;&gt;Pourquoi le site w3schools est-il lui-même mauvais ?&lt;/h2&gt;
+
+&lt;p&gt;Pour cette partie, je vous recommande de lire &lt;a href=&quot;https://www.impressivewebs.com/w3schools-ugly-bad-good/&quot;&gt;cet article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PS:&lt;/strong&gt; Si j’ai oublié quelque chose, vous pouvez &lt;a href=&quot;https://help.github.com/articles/creating-an-issue/&quot;&gt;ouvrir une issue&lt;/a&gt; sur le &lt;a href=&quot;https://github.com/binksxela/binksxela.github.io&quot;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; w3schools →🗑, utilisez plutôt &lt;a href=&quot;https://developer.mozilla.org/en-US/&quot;&gt;le MDN&lt;/a&gt; 🕶&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
   
   
   <entry>
@@ -442,10 +607,6 @@ Créez un &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;jeton d�
 &lt;p&gt;Lorsque &lt;code&gt;gist-diff&lt;/code&gt; a créé le gist, il ouvrira l’URL du gist dans votre navigateur&lt;/p&gt;
 </content>
   </entry>
-  
-  
-  
-  
   
   
   
