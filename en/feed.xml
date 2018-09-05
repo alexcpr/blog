@@ -3,7 +3,7 @@
   <title>News 'n' Updates | Xela's Blog</title>
   <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
   <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-31T23:44:49+02:00</updated>
+  <updated>2018-09-05T16:52:16+02:00</updated>
   <id>https://xela.isfucking.cool/</id>
   <author>
     <name></name>
@@ -124,9 +124,9 @@
       &lt;li&gt;No tutorial/documentation about the modern &lt;code&gt;fetch&lt;/code&gt; API only about &lt;a href=&quot;https://www.w3schools.com/js/js_ajax_intro.asp&quot;&gt;XMLHttpRequest&lt;/a&gt;. &lt;em&gt;&lt;a href=&quot;https://xela.isfucking.cool/blog/en/fetch-api&quot;&gt;See why you should be using fetch and not XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/js/js_objects.asp&quot;&gt;JavaScript Objects tutorial&lt;/a&gt; they could have used short syntax for object methods like this&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;pre&gt;&lt;code&gt;{
-  firstName: &quot;John&quot;,
-  lastName : &quot;Doe&quot;,
+    &lt;pre&gt;&lt;code class=&quot;json&quot;&gt;{
+  firstName: &amp;#x22;John&amp;#x22;,
+  lastName : &amp;#x22;Doe&amp;#x22;,
   id       : 1,
   method() {
       // code of the method here
@@ -204,24 +204,23 @@ And I’m sure you can still find some funny things they were doing a few years 
 
 &lt;p&gt;XHR is a bit overcomplicated in my opinion and I still don’t understand why &lt;code&gt;XML&lt;/code&gt; is uppercase while &lt;code&gt;Http&lt;/code&gt; is camel-cased, it doesn’t make any sense at all. Anyways, here’s a common XHR usage&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (window.XMLHttpRequest) { // Mozilla, Safari, etc...
-request = new XMLHttpRequest();
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;if (window.XMLHttpRequest) { // Mozilla, Safari, etc...
+    request = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE
-try {
-    request = new ActiveXObject('Msxml2.XMLHTTP');
-} 
-catch (e) {
     try {
-    request = new ActiveXObject('Microsoft.XMLHTTP');
+        request = new ActiveXObject(&amp;#x27;Msxml2.XMLHTTP&amp;#x27;);
     } 
-    catch (e) {}
-}
+    catch (e) {
+        try {
+            request = new ActiveXObject(&amp;#x27;Microsoft.XMLHTTP&amp;#x27;);
+        } 
+        catch (e) {}
+    }
 }
 
 // Open the request and send it.
-request.open('GET', 'https://example.com/api', true);
-request.send(null);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+request.open(&amp;#x27;GET&amp;#x27;, &amp;#x27;https://example.com/api&amp;#x27;, true);
+request.send(null);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Of course JavaScript frameworks make XHR more pleasant to work with, but what you see above is a “&lt;strong&gt;simple&lt;/strong&gt;” example of the most basic XHR usage. XHR is a real mess.&lt;/p&gt;
 
@@ -229,15 +228,14 @@ request.send(null);
 
 &lt;p&gt;The &lt;code&gt;fetch&lt;/code&gt; function is provided in the global &lt;code&gt;window&lt;/code&gt; scope, with the first argument being the URL (required) and the second the options (optional)&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// fetch(url, options) | url: required - options: optional
-fetch('https://example.com/api', {
-    method: 'get'
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// fetch(url, options) | url: required - options: optional
+fetch(&amp;#x27;https://example.com/api&amp;#x27;, {
+    method: &amp;#x27;get&amp;#x27;
 }).then(function(response) {
     // Success :)
 }).catch(function(err) {
     // Error :(
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And as you can see &lt;code&gt;fetch&lt;/code&gt; uses &lt;strong&gt;Javascript Promises&lt;/strong&gt; in order to handle results/callbacks. If you aren’t used to &lt;strong&gt;Javascript Promises&lt;/strong&gt; yet, get used to it – it will soon be everywhere.&lt;/p&gt;
 
@@ -245,39 +243,38 @@ fetch('https://example.com/api', {
 
 &lt;p&gt;The ability to set request headers is important in request flexibility, you can work with request headers by executing &lt;code&gt;new Headers()&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Create an empty Headers instance
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Create an empty Headers instance
 const headers = new Headers();
 
 // Add headers
-headers.append('Custom-Header', 'MySuperValue');
-headers.append('Content-Type', 'text/html');
+headers.append(&amp;#x27;Custom-Header&amp;#x27;, &amp;#x27;MySuperValue&amp;#x27;);
+headers.append(&amp;#x27;Content-Type&amp;#x27;, &amp;#x27;text/html&amp;#x27;);
 
 // Check if this header is present
-headers.has('Content-Type'); // true
-headers.has('Some-Header'); // false
+headers.has(&amp;#x27;Content-Type&amp;#x27;); // true
+headers.has(&amp;#x27;Some-Header&amp;#x27;); // false
 
 // Get the value of a specific header
-headers.get('Custom-Header'); // MySuperValue
+headers.get(&amp;#x27;Custom-Header&amp;#x27;); // MySuperValue
 
 // Set a new value for an existing header
-headers.set('Content-Type', 'text/plain');
+headers.set(&amp;#x27;Content-Type&amp;#x27;, &amp;#x27;text/plain&amp;#x27;);
 
 // Delete a header
-headers.delete('Custom-Header');
+headers.delete(&amp;#x27;Custom-Header&amp;#x27;);
 
 // Add initial values
 const headers = new Headers({
-    'Content-Type': 'application/json',
-    'User-Agent': 'MySuperUserAgent'
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    &amp;#x27;Content-Type&amp;#x27;: &amp;#x27;application/json&amp;#x27;,
+    &amp;#x27;User-Agent&amp;#x27;: &amp;#x27;MySuperUserAgent&amp;#x27;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;In order to use request headers, you must first create a new &lt;code&gt;Request&lt;/code&gt; instance&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const request = new Request('https://example.com/api', {
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;const request = new Request(&amp;#x27;https://example.com/api&amp;#x27;, {
     headers: new Headers({
-        'Content-Type': 'application/json',
-        'User-Agent': 'MyCustomUserAgent'
+        &amp;#x27;Content-Type&amp;#x27;: &amp;#x27;application/json&amp;#x27;,
+        &amp;#x27;User-Agent&amp;#x27;: &amp;#x27;MyCustomUserAgent&amp;#x27;
     })
 });
 
@@ -285,8 +282,7 @@ fetch(request).then(function(response) {
     // process the response
 }).catch(function(error) {
     // process the error
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;request&quot;&gt;Request&lt;/h2&gt;
 
@@ -306,35 +302,33 @@ fetch(request).then(function(response) {
 
 &lt;p&gt;Here’s a sample of &lt;code&gt;Request&lt;/code&gt; usage&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Build the request
-const request = new Request('https://example.com/anything', {
-    method: 'HEAD', 
-    mode: 'no-cors', 
-    redirect: 'follow',
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Build the request
+const request = new Request(&amp;#x27;https://example.com/anything&amp;#x27;, {
+    method: &amp;#x27;HEAD&amp;#x27;, 
+    mode: &amp;#x27;no-cors&amp;#x27;, 
+    redirect: &amp;#x27;follow&amp;#x27;,
     headers: new Headers({
-        'Content-Type': 'text/html'
+        &amp;#x27;Content-Type&amp;#x27;: &amp;#x27;text/html&amp;#x27;
     })
 });
 
 // And now use the request
 fetch(request).then(function() {
     // handle response 
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Only the first parameter, the URL, is required. Each property becomes read only once the &lt;code&gt;Request&lt;/code&gt; instance has been created. Also important to note that &lt;code&gt;Request&lt;/code&gt; has a clone method which is important when using &lt;code&gt;fetch&lt;/code&gt; within the Service Worker API – a &lt;code&gt;Request&lt;/code&gt; is a stream and thus must be cloned when passing to another &lt;code&gt;fetch&lt;/code&gt; call.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/anything', {
-    method: 'HEAD', 
-    mode: 'no-cors', 
-    redirect: 'follow',
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://example.com/anything&amp;#x27;, {
+    method: &amp;#x27;HEAD&amp;#x27;, 
+    mode: &amp;#x27;no-cors&amp;#x27;, 
+    redirect: &amp;#x27;follow&amp;#x27;,
     headers: new Headers({
-        'Content-Type': 'text/html'
+        &amp;#x27;Content-Type&amp;#x27;: &amp;#x27;text/html&amp;#x27;
     })
 }).then(function() {
     // handle response 
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You’ll likely only use Request instances within Service Workers since the Request and fetch signatures can be the same.&lt;/p&gt;
 
@@ -352,16 +346,16 @@ fetch(request).then(function() {
   &lt;li&gt;&lt;code&gt;headers&lt;/code&gt; - Headers object associated with the response.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;// Fake response for service worker testing -- new Response(body, options)
-const response = new Response('response body', {
-	ok: false,
-	status: 404,
-	url: '/'
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Fake response for service worker testing -- new Response(body, options)
+const response = new Response(&amp;#x27;response body&amp;#x27;, {
+    ok: false,
+    status: 404,
+    url: &amp;#x27;/&amp;#x27;
 });
 
-// The fetch's then gets a Response instance back
-fetch('https://exemple.com/').then(function(response) {
-	console.log('ok: ', response.ok); // false
+// The fetch&amp;#x27;s then gets a Response instance back
+fetch(&amp;#x27;https://exemple.com/&amp;#x27;).then(function(response) {
+    console.log(&amp;#x27;ok: &amp;#x27;, response.ok); // false
 });&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The &lt;code&gt;Response&lt;/code&gt; also provides the following methods:&lt;/p&gt;
@@ -381,14 +375,13 @@ fetch('https://exemple.com/').then(function(response) {
 
 &lt;p&gt;Let’s say you make a request for JSON, the resulting callback data has a json method for converting the raw data to a JavaScript object&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/api/list.json').then(function(response) { 
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://example.com/api/list.json&amp;#x27;).then(function(response) { 
     // Convert to JSON
     return response.json();
 }).then(function(jsObj) {
     // jsObj is an javascript object from the json response
     console.log(jsObj); 
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The &lt;code&gt;json()&lt;/code&gt; method is a simple shortcut to &lt;code&gt;JSON.parse(jsonString)&lt;/code&gt;&lt;/p&gt;
 
@@ -396,13 +389,12 @@ fetch('https://exemple.com/').then(function(response) {
 
 &lt;p&gt;JSON isn’t always the desired request response format so here’s how you can work with an HTML or text response&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('/404').then(function(response) {
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;/404&amp;#x27;).then(function(response) {
     return response.text();
 }).then(function(htmlresponse) { 
-    // &amp;lt;!DOCTYPE ....
+    // &amp;#x3C;!DOCTYPE ....
     console.log(htmlresponse); 
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You can get the response text via chaining the Promise’s &lt;code&gt;then&lt;/code&gt; method along with the &lt;code&gt;text()&lt;/code&gt; method.&lt;/p&gt;
 
@@ -410,13 +402,12 @@ fetch('https://exemple.com/').then(function(response) {
 
 &lt;p&gt;For example, loading image via fetch its a bit different&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/someimage.jpg').then(function(response) {
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://example.com/someimage.jpg&amp;#x27;).then(function(response) {
     return response.blob();
 })
 .then(function(imageBlob) {
-    document.querySelector('img').src = URL.createObjectURL(imageBlob);
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    document.querySelector(&amp;#x27;img&amp;#x27;).src = URL.createObjectURL(imageBlob);
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The &lt;code&gt;blob()&lt;/code&gt; method of the Body mixing takes a Response stream and reads it to completion.&lt;/p&gt;
 
@@ -424,23 +415,21 @@ fetch('https://exemple.com/').then(function(response) {
 
 &lt;p&gt;AJAX is used a lot for sending form data, here’s how you would do it with the use of fetch&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/submit', {
-    method: 'post',
-    body: new FormData(document.getElementById('myForm'))
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://example.com/submit&amp;#x27;, {
+    method: &amp;#x27;post&amp;#x27;,
+    body: new FormData(document.getElementById(&amp;#x27;myForm&amp;#x27;))
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And if you want to post some JSON data&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/submit', {
-    method: 'post',
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://example.com/submit&amp;#x27;, {
+    method: &amp;#x27;post&amp;#x27;,
     body: JSON.stringify({
-        some: document.querySelector('#some').value,
-        json: document.querySelector('#json').value,
-        data: document.querySelector('#data').value
+        some: document.querySelector(&amp;#x27;#some&amp;#x27;).value,
+        json: document.querySelector(&amp;#x27;#json&amp;#x27;).value,
+        data: document.querySelector(&amp;#x27;#data&amp;#x27;).value
     })
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Simple as that!&lt;/p&gt;
 
@@ -468,24 +457,22 @@ fetch('https://exemple.com/').then(function(response) {
     <content type="html">&lt;p&gt;What I would like to see on websites is a little counter of the page load time placed in the footer, so I decided to share you the little piece of code in order to easily integrate this counter in your website footer.&lt;/p&gt;
 
 &lt;p&gt;ES5 Version (Older browsers)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(function() {
-  var t = window.performance &amp;amp;&amp;amp; performance.timing;
-  if (!t) {
-    return;
-  }
-  var loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
-  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;(function () {
+    var time = window.performance &amp;#x26;&amp;#x26; performance.timing;
+    if (time) {
+        var load = (time.loadEventEnd - time.navigationStart) / 1e3;
+        alert(&amp;#x22;This page loaded in &amp;#x22; + load + &amp;#x22; seconds&amp;#x22;);
+    }
 })();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;ES6 Version (Modern browsers)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(function(){
-  const t = window.performance &amp;amp;&amp;amp; performance.timing;
-  if (!t) {
-    return;
-  }
-  const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
-  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
-}())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;(() =&amp;#x3E; {
+    const time = window.performance &amp;#x26;&amp;#x26; performance.timing;
+    if (time) {
+        const load = (time.loadEventEnd - time.navigationStart) / 1e3;
+        alert(&amp;#x60;This page loaded in ${load} seconds&amp;#x60;)
+    }
+})();&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
   
@@ -507,11 +494,10 @@ fetch('https://exemple.com/').then(function(response) {
 &lt;h2 id=&quot;google-button-source-code&quot;&gt;Google button Source Code&lt;/h2&gt;
 
 &lt;p&gt;HTML&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;google button&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Google Search&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;#x3C;a href=&amp;#x22;#&amp;#x22; class=&amp;#x22;google button&amp;#x22;&amp;#x3E;Google Search&amp;#x3C;/a&amp;#x3E;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;CSS (775 bytes uncompressed)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.button {
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;.button {
 	display: inline-block;
 	background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
 	-moz-border-radius: 2px;

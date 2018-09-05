@@ -3,7 +3,7 @@
   <title>Nouvelles et mises à jour | Xela's Blog</title>
   <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
   <link href="https://xela.isfucking.cool/"/>
-  <updated>2018-08-31T23:44:49+02:00</updated>
+  <updated>2018-09-05T16:52:16+02:00</updated>
   <id>https://xela.isfucking.cool/</id>
   <author>
     <name></name>
@@ -122,12 +122,12 @@
       &lt;li&gt;Pas de tutoriel/documentation sur l’API &lt;code&gt;fetch&lt;/code&gt; moderne seulement sur &lt;a href=&quot;https://www.w3schools.com/js/js_ajax_intro.asp&quot;&gt;XMLHttpRequest&lt;/a&gt;. &lt;em&gt;&lt;a href=&quot;https://xela.isfucking.cool/blog/fr/fetch-api&quot;&gt;Voyez pourquoi vous devriez utiliser fetch et non XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_objects.asp&quot;&gt;tutoriel sur les objets en JavaScript&lt;/a&gt;, ils auraient pu utiliser la syntaxe courte pour des créer une méthode dans un objet comme ceci&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;pre&gt;&lt;code&gt;{
-  firstName: &quot;John&quot;,
-  lastName : &quot;Doe&quot;,
+    &lt;pre&gt;&lt;code class=&quot;json&quot;&gt;{
+  firstName: &amp;#x22;John&amp;#x22;,
+  lastName : &amp;#x22;Doe&amp;#x22;,
   id       : 1,
   method() {
-      // code de la méthode ici
+      // code de la m&amp;#xE9;thode ici
   }
 }&lt;/code&gt;&lt;/pre&gt;
     &lt;ul&gt;
@@ -202,24 +202,23 @@ Et je suis sûr que vous pouvez trouver encore des choses drôles qu’ils faisa
 
 &lt;p&gt;XHR est un peu trop compliqué à mon avis et je ne comprends toujours pas pourquoi &lt;code&gt;XML&lt;/code&gt; est en majuscules alors que &lt;code&gt;Http&lt;/code&gt; est en camel-case, cela n’a aucun sens. Quoi qu’il en soit, voici un usage courant de l’API XHR&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (window.XMLHttpRequest) { // Mozilla, Safari, etc...
-request = new XMLHttpRequest();
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;if (window.XMLHttpRequest) { // Mozilla, Safari, etc...
+    request = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE
-try {
-    request = new ActiveXObject('Msxml2.XMLHTTP');
-} 
-catch (e) {
     try {
-    request = new ActiveXObject('Microsoft.XMLHTTP');
+        request = new ActiveXObject(&amp;#x27;Msxml2.XMLHTTP&amp;#x27;);
     } 
-    catch (e) {}
-}
+    catch (e) {
+        try {
+            request = new ActiveXObject(&amp;#x27;Microsoft.XMLHTTP&amp;#x27;);
+        } 
+        catch (e) {}
+    }
 }
 
-// Ouvre la demande et l'envoie
-request.open('GET', 'https://example.com/api', true);
-request.send(null);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+// Ouvre la demande et l&amp;#x27;envoie
+request.open(&amp;#x27;GET&amp;#x27;, &amp;#x27;https://exemple.com/api&amp;#x27;, true);
+request.send(null);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Bien sûr, les frameworks JavaScript rendent l’API XHR plus agréable à utiliser, mais ce que vous voyez ci-dessus est un exemple “&lt;strong&gt;simple&lt;/strong&gt;” de l’utilisation la plus basique de XHR. XHR est un vrai gâchis.&lt;/p&gt;
 
@@ -227,15 +226,14 @@ request.send(null);
 
 &lt;p&gt;L’API &lt;code&gt;fetch&lt;/code&gt; est fournie dans l’objet &lt;code&gt;window&lt;/code&gt; globale, le premier argument étant l’URL (obligatoire) et le second les options (facultatif).&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// fetch(url, options) | url: obligatoire - options: facultatif
-fetch('https://example.com/api', {
-    method: 'get'
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// fetch(url, options) | url: obligatoire - options: facultatif
+fetch(&amp;#x27;https://exemple.com/api&amp;#x27;, {
+    method: &amp;#x27;get&amp;#x27;
 }).then(function(response) {
-    // Succès :)
+    // Succ&amp;#xE8;s :)
 }).catch(function(err) {
     // Erreur :(
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Et comme vous pouvez le voir, &lt;code&gt;fetch&lt;/code&gt; utilise les promesses Javascript pour gérer les résultats et les callbacks. Si vous n’êtes pas encore habitué aux promesses Javascript, habituez-vous - elles seront bientôt partout.&lt;/p&gt;
 
@@ -243,48 +241,46 @@ fetch('https://example.com/api', {
 
 &lt;p&gt;La possibilité de définir des en-têtes de requête est importante dans la flexibilité de la requête, vous pouvez travailler avec les en-têtes de requête en exécutant &lt;code&gt;new Headers()&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Créer une instance d'en-têtes vide
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Cr&amp;#xE9;er une instance d&amp;#x27;en-t&amp;#xEA;tes vide
 const headers = new Headers();
 
-// Ajouter des en-têtes
-headers.append('EnTeteCustom', 'MaSuperValeur');
-headers.append('Content-Type', 'text/html');
+// Ajouter des en-t&amp;#xEA;tes
+headers.append(&amp;#x27;EnTeteCustom&amp;#x27;, &amp;#x27;MaSuperValeur&amp;#x27;);
+headers.append(&amp;#x27;Content-Type&amp;#x27;, &amp;#x27;text/html&amp;#x27;);
 
-// Vérifier si cet en-tête est présent
-headers.has('Content-Type'); // vrai
-headers.has('Some-Header'); // faux
+// V&amp;#xE9;rifier si cet en-t&amp;#xEA;te est pr&amp;#xE9;sent
+headers.has(&amp;#x27;Content-Type&amp;#x27;); // vrai
+headers.has(&amp;#x27;Some-Header&amp;#x27;); // faux
 
-// Obtenir la valeur d'un en-tête spécifique
-headers.get('EnTeteCustom'); // MaSuperValeur
+// Obtenir la valeur d&amp;#x27;un en-t&amp;#xEA;te sp&amp;#xE9;cifique
+headers.get(&amp;#x27;EnTeteCustom&amp;#x27;); // MaSuperValeur
 
-// Définir une nouvelle valeur pour un en-tête existant
-headers.set('Content-Type', 'text/plain');
+// D&amp;#xE9;finir une nouvelle valeur pour un en-t&amp;#xEA;te existant
+headers.set(&amp;#x27;Content-Type&amp;#x27;, &amp;#x27;text/plain&amp;#x27;);
 
-// Supprimer une en-tête
-headers.delete('EnTeteCustom');
+// Supprimer une en-t&amp;#xEA;te
+headers.delete(&amp;#x27;EnTeteCustom&amp;#x27;);
 
 // Additionner les valeurs initiales
 const headers = new Headers({
-    'Content-Type': 'application/json',
-    'User-Agent': 'MonSuperUserAgent'
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    &amp;#x27;Content-Type&amp;#x27;: &amp;#x27;application/json&amp;#x27;,
+    &amp;#x27;User-Agent&amp;#x27;: &amp;#x27;MonSuperUserAgent&amp;#x27;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Pour utiliser les en-têtes de Request, vous devez d’abord créer une nouvelle instance de &lt;code&gt;Request&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const request = new Request('https://example.com/api', {
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;const request = new Request(&amp;#x27;https://exemple.com/api&amp;#x27;, {
     headers: new Headers({
-        'Content-Type': 'application/json',
-        'User-Agent': 'MonSuperUserAgent'
+        &amp;#x27;Content-Type&amp;#x27;: &amp;#x27;application/json&amp;#x27;,
+        &amp;#x27;User-Agent&amp;#x27;: &amp;#x27;MonSuperUserAgent&amp;#x27;
     })
 });
 
 fetch(request).then(function(response) {
-    // traiter la réponse
+    // traiter la r&amp;#xE9;ponse
 }).catch(function(error) {
-    // traiter l'erreur
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    // traiter l&amp;#x27;erreur
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;requête&quot;&gt;Requête&lt;/h2&gt;
 
@@ -304,35 +300,33 @@ fetch(request).then(function(response) {
 
 &lt;p&gt;Voici un exemple d’utilisation de &lt;code&gt;Request&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Construire la requête
-const request = new Request('https://example.com/anything', {
-    method: 'HEAD', 
-    mode: 'no-cors', 
-    redirect: 'follow',
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;// Construire la requ&amp;#xEA;te
+const request = new Request(&amp;#x27;https://exemple.com/anything&amp;#x27;, {
+    method: &amp;#x27;HEAD&amp;#x27;, 
+    mode: &amp;#x27;no-cors&amp;#x27;, 
+    redirect: &amp;#x27;follow&amp;#x27;,
     headers: new Headers({
-        'Content-Type': 'text/html'
+        &amp;#x27;Content-Type&amp;#x27;: &amp;#x27;text/html&amp;#x27;
     })
 });
 
-// Et maintenant, utilisez la requête
+// Et maintenant, utilisez la requ&amp;#xEA;te
 fetch(request).then(function() {
     // handle response 
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Seul le premier paramètre, l’URL, est requis. Chaque propriété ne peut être que lu dès que l’instance de la &lt;code&gt;Request&lt;/code&gt; a été créée. Il est également important de noter que &lt;code&gt;Request&lt;/code&gt; a une méthode de clonage qui est importante lors de l’utilisation de &lt;code&gt;fetch&lt;/code&gt; dans l’API Service Worker - une &lt;code&gt;Request&lt;/code&gt; est un flux et doit donc être clonée lors du passage à un autre appel de &lt;code&gt;fetch&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/anything', {
-    method: 'HEAD', 
-    mode: 'no-cors', 
-    redirect: 'follow',
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://exemple.com/anything&amp;#x27;, {
+    method: &amp;#x27;HEAD&amp;#x27;, 
+    mode: &amp;#x27;no-cors&amp;#x27;, 
+    redirect: &amp;#x27;follow&amp;#x27;,
     headers: new Headers({
-        'Content-Type': 'text/html'
+        &amp;#x27;Content-Type&amp;#x27;: &amp;#x27;text/html&amp;#x27;
     })
 }).then(function() {
-    // gérer la réponse 
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    // g&amp;#xE9;rer la r&amp;#xE9;ponse 
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Vous n’utiliserez probablement que des instances de Request au sein de Service Workers puisque les signatures Request et fetch peuvent être les mêmes.&lt;/p&gt;
 
@@ -350,16 +344,16 @@ fetch(request).then(function() {
   &lt;li&gt;&lt;code&gt;headers&lt;/code&gt; - Objet d’en-tête associé à la réponse.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;// Fausse réponse pour les tests des service workers -- new Response(body, options)
-const response = new Response('response body', {
-	ok: false,
-	status: 404,
-	url: '/'
+&lt;pre&gt;&lt;code&gt;// Fausse r&amp;#xE9;ponse pour les tests des service workers -- new Response(body, options)
+const response = new Response(&amp;#x27;response body&amp;#x27;, {
+    ok: false,
+    status: 404,
+    url: &amp;#x27;/&amp;#x27;
 });
 
-// Le then de fetch récupère alors une instance de réponse.
-fetch('https://exemple.com/').then(function(response) {
-	console.log('ok: ', response.ok); // faux
+// Le then de fetch r&amp;#xE9;cup&amp;#xE8;re alors une instance de r&amp;#xE9;ponse.
+fetch(&amp;#x27;https://exemple.com/&amp;#x27;).then(function(response) {
+    console.log(&amp;#x27;ok: &amp;#x27;, response.ok); // faux
 });&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;La &lt;code&gt;Response&lt;/code&gt; fournit également les méthodes suivantes :&lt;/p&gt;
@@ -379,14 +373,13 @@ fetch('https://exemple.com/').then(function(response) {
 
 &lt;p&gt;Disons que vous faites une requête pour JSON, les données de rappel résultantes ont une méthode json pour convertir les données brutes en objet JavaScript&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/api/list.json').then(function(response) { 
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://exemple.com/api/list.json&amp;#x27;).then(function(response) { 
     // Convertir en JSON
     return response.json();
 }).then(function(jsObj) {
-    // jsObj est un objet javascript de la réponse json
+    // jsObj est un objet javascript de la r&amp;#xE9;ponse json
     console.log(jsObj); 
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;La méthode &lt;code&gt;json()&lt;/code&gt; est un simple raccourci vers &lt;code&gt;JSON.parse(jsonString)&lt;/code&gt;&lt;/p&gt;
 
@@ -394,13 +387,12 @@ fetch('https://exemple.com/').then(function(response) {
 
 &lt;p&gt;JSON n’est pas toujours le format de réponse désiré, alors voici comment vous pouvez travailler avec une réponse HTML ou textuelle&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('/404').then(function(response) {
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;/404&amp;#x27;).then(function(response) {
     return response.text();
 }).then(function(htmlresponse) { 
-    // &amp;lt;!DOCTYPE ....
+    // &amp;#x3C;!DOCTYPE ....
     console.log(htmlresponse); 
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Vous pouvez obtenir le texte de réponse enchaînant la méthode &lt;code&gt;then&lt;/code&gt; de la promesse avec la méthode &lt;code&gt;text()&lt;/code&gt;&lt;/p&gt;
 
@@ -408,13 +400,12 @@ fetch('https://exemple.com/').then(function(response) {
 
 &lt;p&gt;Par exemple, charger une image via fetch est un peu différent&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/someimage.jpg').then(function(response) {
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://exemple.com/someimage.jpg&amp;#x27;).then(function(response) {
     return response.blob();
 })
 .then(function(imageBlob) {
-    document.querySelector('img').src = URL.createObjectURL(imageBlob);
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    document.querySelector(&amp;#x27;img&amp;#x27;).src = URL.createObjectURL(imageBlob);
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;La méthode &lt;code&gt;blob()&lt;/code&gt; du Body mixing prend un flux de réponse et le lit jusqu’à la fin.&lt;/p&gt;
 
@@ -422,23 +413,21 @@ fetch('https://exemple.com/').then(function(response) {
 
 &lt;p&gt;AJAX est beaucoup utilisé pour envoyer des données de formulaire, voici comment vous le feriez avec l’utilisation de fetch&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/submit', {
-    method: 'post',
-    body: new FormData(document.getElementById('myForm'))
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://exemple.com/submit&amp;#x27;, {
+    method: &amp;#x27;post&amp;#x27;,
+    body: new FormData(document.getElementById(&amp;#x27;myForm&amp;#x27;))
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Et si vous voulez poster des données JSON&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fetch('https://example.com/submit', {
-    method: 'post',
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;fetch(&amp;#x27;https://exemple.com/submit&amp;#x27;, {
+    method: &amp;#x27;post&amp;#x27;,
     body: JSON.stringify({
-        some: document.querySelector('#some').value,
-        json: document.querySelector('#json').value,
-        data: document.querySelector('#data').value
+        some: document.querySelector(&amp;#x27;#some&amp;#x27;).value,
+        json: document.querySelector(&amp;#x27;#json&amp;#x27;).value,
+        data: document.querySelector(&amp;#x27;#data&amp;#x27;).value
     })
-});
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+});&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;C’est aussi simple que ça !&lt;/p&gt;
 
@@ -460,24 +449,22 @@ fetch('https://exemple.com/').then(function(response) {
     <content type="html">&lt;p&gt;Ce que j’aimerais voir sur les sites web est un petit compteur du temps de chargement de la page placé dans le footer de la page, alors j’ai décidé de vous partager le petit morceau de code afin d’intégrer facilement ce compteur dans le footer sur votre site web.&lt;/p&gt;
 
 &lt;p&gt;Version ES5 (Navigateurs anciens)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(function() {
-  var t = window.performance &amp;amp;&amp;amp; performance.timing;
-  if (!t) {
-    return;
-  }
-  var loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
-  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;(function () {
+    var time = window.performance &amp;#x26;&amp;#x26; performance.timing;
+    if (time) {
+        var load = (time.loadEventEnd - time.navigationStart) / 1e3;
+        alert(&amp;#x22;Cette page a &amp;#xE9;t&amp;#xE9; charg&amp;#xE9;e en &amp;#x22; + load + &amp;#x22; secondes&amp;#x22;);
+    }
 })();&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;ES6 Version (Navigateurs modernes)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(function(){
-  const t = window.performance &amp;amp;&amp;amp; performance.timing;
-  if (!t) {
-    return;
-  }
-  const loadTime = (t.loadEventEnd - t.navigationStart) / 1000;
-  alert(&quot;This page loaded in &quot; + loadTime + &quot; seconds&quot;);
-}())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;(() =&amp;#x3E; {
+    const time = window.performance &amp;#x26;&amp;#x26; performance.timing;
+    if (time) {
+        const load = (time.loadEventEnd - time.navigationStart) / 1e3;
+        alert(&amp;#x60;Cette page a &amp;#xE9;t&amp;#xE9; charg&amp;#xE9;e en ${load} secondes&amp;#x60;)
+    }
+})();&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
   
@@ -499,40 +486,39 @@ fetch('https://exemple.com/').then(function(response) {
 &lt;h2 id=&quot;google-button-source-code&quot;&gt;Google button Source Code&lt;/h2&gt;
 
 &lt;p&gt;HTML&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;google button&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Recherche Googleh&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;#x3C;a href=&amp;#x22;#&amp;#x22; class=&amp;#x22;google button&amp;#x22;&amp;#x3E;Recherche Google&amp;#x3C;/a&amp;#x3E;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;CSS (775 octets non compressés)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.button {
-	display: inline-block;
-	background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
-	-moz-border-radius: 2px;
-	-moz-user-select: none;
-	background-color: #f2f2f2;
-	color: #757575;
-	width: 152px;
-	font-family: arial, sans-serif;
-	font-size: 13px;
-	border: 1px solid #f2f2f2;
-	border-radius: 2px;
-	cursor: default;
-	font-weight: 700;
-	text-align: center;
-	line-height: 27px;
-	min-width: 54px;
-	padding: 0 16px;
-	text-decoration: none
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;.button {
+    display: inline-block;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+    -moz-border-radius: 2px;
+    -moz-user-select: none;
+    background-color: #f2f2f2;
+    color: #757575;
+    width: 152px;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    cursor: default;
+    font-weight: 700;
+    text-align: center;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-decoration: none
 }
 .button:hover {
-	background-color: #f8f8f8;
-	background-image: linear-gradient(top, #f8f8f8, #f1f1f1);
-	border: 1px solid #c6c6c6;
-	color: #333;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, .1)
+    background-color: #f8f8f8;
+    background-image: linear-gradient(top, #f8f8f8, #f1f1f1);
+    border: 1px solid #c6c6c6;
+    color: #333;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1)
 }
 .button.default:active {
-	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
-	color: #000
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    color: #000
 }&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Et c’est tout !&lt;/p&gt;
@@ -597,22 +583,22 @@ Cliquez avec le bouton droit de la souris sur n’importe quoi dans votre barre 
 
 &lt;p&gt;1.
 Installer le paquet npm &lt;code&gt;pretty-diff&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g pretty-diff&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;npm install -g pretty-diff&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;2.
 Ajoutez votre nom d’utilisateur github dans la configuration globale de git&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git config --global github.user &quot;VotreNomDutilisateurGitHubIci&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global github.user &amp;#x22;VotreNomDutilisateurGitHubIci&amp;#x22;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;3.
 Créez un &lt;a href=&quot;https://github.com/settings/tokens&quot;&gt;jeton d’accès personnel&lt;/a&gt; (n’oubliez pas de cocher la case “Créer un gist”) afin de faire fonctionner &lt;code&gt;pretty-diff&lt;/code&gt;. Une fois que vous avez créé le jeton, exécutez cette commande&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git config --global gist-diff.token &quot;YourPersonalAccessTokenHere&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global gist-diff.token &amp;#x22;VotreTokenPersonnelIci&amp;#x22;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Vous êtes maintenant prêt à utiliser &lt;code&gt;gist-diff&lt;/code&gt;!&lt;/p&gt;
 
 &lt;h2 id=&quot;créer-un-gist&quot;&gt;Créer un Gist&lt;/h2&gt;
 
 &lt;p&gt;Maintenant vous pouvez simplement exécuter la commande &lt;code&gt;gist-diff&lt;/code&gt; afin de créer un gist avec le contenu de &lt;code&gt;git diff&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gist-diff&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gist-diff&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Lorsque &lt;code&gt;gist-diff&lt;/code&gt; a créé le gist, il ouvrira l’URL du gist dans votre navigateur&lt;/p&gt;
 </content>
   </entry>
