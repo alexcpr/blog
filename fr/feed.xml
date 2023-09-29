@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Nouvelles et mises à jour | Xela's Blog</title>
-  <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
-  <link href="https://xela.isfucking.cool/"/>
+  <title>Nouvelles et mises à jour | Alexandre's Blog</title>
+  <link href="https://blog.alexandrecipor.com/feed.xml" rel="self"/>
+  <link href="https://blog.alexandrecipor.com/"/>
   <updated>2018-09-08T15:16:29+02:00</updated>
-  <id>https://xela.isfucking.cool/</id>
+  <id>https://blog.alexandrecipor.com/</id>
   <author>
     <name></name>
   </author>
@@ -13,9 +13,9 @@
   
   <entry>
     <title>Pourquoi w3schools est-il une mauvaise source d'information ?</title>
-    <link href="https://xela.isfucking.cool/blog/fr/why-is-w3schools-bad"/>
+    <link href="https://blog.alexandrecipor.com/fr/why-is-w3schools-bad"/>
     <updated>2018-08-29T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/why-is-w3schools-bad</id>
+    <id>https://blog.alexandrecipor.com/fr/why-is-w3schools-bad</id>
     <content type="html">&lt;p&gt;En tant que développeur, j’utilise &lt;a href=&quot;https://discordapp.com/&quot;&gt;Discord&lt;/a&gt; tous les jours pour discuter avec des personnes et des amis au sujet de la programmation et je suis principalement dans des serveurs Discord en rapport à la programmation. J’ai surtout été dans un serveur Discord en particulier pendant quelques jours, serveur rassemblant environ 25.000 membres, et j’ai pu apercevoir des personnes partager des liens menants vers des tutoriels du site &lt;a href=&quot;https://www.w3schools.com/&quot;&gt;w3schools&lt;/a&gt;, site qui est une mauvaise source d’information pour apprendre à programmer. J’ai donc décidé d’alerter un administrateur pour qu’il fasse quelque chose à ce sujet et il m’avait répondu que les tutoriels provenant du site w3schools sont parfois désuets et que cela n’est pas un gros problème en soi. Cependant, il est clair que c’est un gros problème parce que, en tant que débutant, quand on apprend quelque chose et qu’on le fait tout le temps, il est difficile d’arrêter de le faire et encore plus si personne ne vous en avertit. Avec tout ce que nous savons sur les meilleures pratiques de développement web, la capacité de w3schools à rester connu nous déconcerte tous.&lt;/p&gt;
 
 &lt;p&gt;Je ne suis pas le premier à dire que w3schools est mauvais ni le dernier à écrire sur le sujet (&lt;a href=&quot;https://web.archive.org/web/20110412103745/http://w3fools.com&quot;&gt;cela a déjà été fait dans le passé&lt;/a&gt;). Le problème est que maintenant, ceux qui conseillent l’utilisation de w3schools commencent à dire que ce site a résolu leurs problèmes. Et bien je vais vous montrer qu’il ne les a pas tous résolus.&lt;/p&gt;
@@ -119,7 +119,7 @@
       &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_variables.asp&quot;&gt;tutoriel sur les variables JavaScript&lt;/a&gt;, il y a plusieurs exemples de rapports de plusieurs variables sur une même ligne sans assignation.&lt;/li&gt;
       &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_operators.asp&quot;&gt;tutoriel sur les opérateurs JavaScript&lt;/a&gt;, ils ne mentionnent pas l’opérateur &lt;code&gt;**&lt;/code&gt;.&lt;/li&gt;
       &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_datatypes.asp&quot;&gt;tutoriel sur les types de données JavaScript&lt;/a&gt;, ils disent : “Vous pouvez considérer que c’est un bug dans JavaScript que le type de null est un objet. Il devrait être null.” C’était un bug au début, mais ce texte pourrait faire penser, à tort, que ce comportement changera un jour.&lt;/li&gt;
-      &lt;li&gt;Pas de tutoriel/documentation sur l’API &lt;code&gt;fetch&lt;/code&gt; moderne seulement sur &lt;a href=&quot;https://www.w3schools.com/js/js_ajax_intro.asp&quot;&gt;XMLHttpRequest&lt;/a&gt;. &lt;em&gt;&lt;a href=&quot;https://xela.isfucking.cool/blog/fr/fetch-api&quot;&gt;Voyez pourquoi vous devriez utiliser fetch et non XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Pas de tutoriel/documentation sur l’API &lt;code&gt;fetch&lt;/code&gt; moderne seulement sur &lt;a href=&quot;https://www.w3schools.com/js/js_ajax_intro.asp&quot;&gt;XMLHttpRequest&lt;/a&gt;. &lt;em&gt;&lt;a href=&quot;https://blog.alexandrecipor.com/fr/fetch-api&quot;&gt;Voyez pourquoi vous devriez utiliser fetch et non XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/js/js_objects.asp&quot;&gt;tutoriel sur les objets en JavaScript&lt;/a&gt;, ils auraient pu utiliser la syntaxe courte pour des créer une méthode dans un objet comme ceci&lt;/li&gt;
     &lt;/ul&gt;
     &lt;pre&gt;&lt;code class=&quot;json&quot;&gt;{
@@ -146,7 +146,7 @@
       &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_install.asp&quot;&gt;tutoriel d’installation de PHP5&lt;/a&gt;, il n’y a pas vraiment d’explications sur la façon d’installer PHP, c’est comme dire “Regardez la doc et démerdez-vous avec elle, nous ne vous parlerons pas de php -S (serveur web interne php pour le développement)”.&lt;/li&gt;
       &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_variables.asp&quot;&gt;tutoriel sur les variables en PHP&lt;/a&gt;, ils utilisent &lt;code&gt;&quot;&lt;/code&gt; par défaut au lieu de &lt;code&gt;'&lt;/code&gt; même sans interpolation. Ils utilisent des variables globales, ce qui est également une mauvaise pratique.&lt;/li&gt;
       &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_arrays.asp&quot;&gt;tutoriel sur les tableaux en PHP&lt;/a&gt;, ils utilisent l’ancienne syntaxe longue &lt;code&gt;array()&lt;/code&gt; bien qu’ils devraient utiliser la syntaxe courte &lt;code&gt;[]&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_ajax_intro.asp&quot;&gt;tutoriel AJAX en PHP&lt;/a&gt;, leurs codes JavaScript et PHP sont pleins de mauvaises pratiques et ils ne parlent même pas du fait que, de nos jours, vous devriez utiliser l’API &lt;code&gt;fetch&lt;/code&gt; à la place d’AJAX. &lt;em&gt;&lt;a href=&quot;https://xela.isfucking.cool/blog/fr/fetch-api&quot;&gt;Voyez pourquoi vous devriez utiliser fetch et non XMLHttp.&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Dans leur &lt;a href=&quot;https://www.w3schools.com/php/php_ajax_intro.asp&quot;&gt;tutoriel AJAX en PHP&lt;/a&gt;, leurs codes JavaScript et PHP sont pleins de mauvaises pratiques et ils ne parlent même pas du fait que, de nos jours, vous devriez utiliser l’API &lt;code&gt;fetch&lt;/code&gt; à la place d’AJAX. &lt;em&gt;&lt;a href=&quot;https://blog.alexandrecipor.com/fr/fetch-api&quot;&gt;Voyez pourquoi vous devriez utiliser fetch et non XMLHttp.&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;Pas de tutoriel sur le hachage des mots de passe.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -175,7 +175,7 @@
 &lt;p&gt;Ils utilisaient des tableaux HTML pour la mise en page et d’ailleurs ce n’est pas une lampe 😂
 Et je suis sûr que vous pouvez trouver encore des choses drôles qu’ils faisaient il y a quelques années.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;PS:&lt;/strong&gt; Si j’ai oublié quelque chose, vous pouvez &lt;a href=&quot;https://help.github.com/articles/creating-an-issue/&quot;&gt;ouvrir une issue&lt;/a&gt; sur le &lt;a href=&quot;https://github.com/binksxela/binksxela.github.io&quot;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PS:&lt;/strong&gt; Si j’ai oublié quelque chose, vous pouvez &lt;a href=&quot;https://help.github.com/articles/creating-an-issue/&quot;&gt;ouvrir une issue&lt;/a&gt; sur le &lt;a href=&quot;https://github.com/binksAlexandre/binksAlexandre.github.io&quot;&gt;dépôt GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; w3schools →🗑, utilisez plutôt &lt;a href=&quot;https://developer.mozilla.org/en-US/&quot;&gt;le MDN&lt;/a&gt; 🕶&lt;/p&gt;
 </content>
@@ -187,9 +187,9 @@ Et je suis sûr que vous pouvez trouver encore des choses drôles qu’ils faisa
   
   <entry>
     <title>Cesser d'utiliser XMLHttpRequest et passer à fetch</title>
-    <link href="https://xela.isfucking.cool/blog/fr/fetch-api"/>
+    <link href="https://blog.alexandrecipor.com/fr/fetch-api"/>
     <updated>2018-08-10T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/fetch-api</id>
+    <id>https://blog.alexandrecipor.com/fr/fetch-api</id>
     <content type="html">&lt;p&gt;L’API XHR la plus populaire est &lt;code&gt;XMLHttpRequest&lt;/code&gt; qui n’a pas vraiment été faite pour ce pour quoi nous l’utilisons. C’est pourquoi l’API &lt;code&gt;fetch&lt;/code&gt; a été créée, l’API &lt;code&gt;fetch&lt;/code&gt; est en quelque sorte un remplacement moderne pour &lt;code&gt;XMLHttpRequest&lt;/code&gt;. Jetons un coup d’oeil à cette méthode &lt;code&gt;window.fetch&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;compatibilité-des-navigateurs&quot;&gt;Compatibilité des navigateurs&lt;/h2&gt;
@@ -443,9 +443,9 @@ fetch(&amp;#x27;https://exemple.com/&amp;#x27;).then(function(response) {
   
   <entry>
     <title>Compteur de temps de chargement d'une page en JS</title>
-    <link href="https://xela.isfucking.cool/blog/fr/page-load-time-counter"/>
+    <link href="https://blog.alexandrecipor.com/fr/page-load-time-counter"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/page-load-time-counter</id>
+    <id>https://blog.alexandrecipor.com/fr/page-load-time-counter</id>
     <content type="html">&lt;p&gt;Ce que j’aimerais voir sur les sites web est un petit compteur du temps de chargement de la page placé dans le footer de la page, alors j’ai décidé de vous partager le petit morceau de code afin d’intégrer facilement ce compteur dans le footer sur votre site web.&lt;/p&gt;
 
 &lt;p&gt;Version ES5 (Navigateurs anciens)&lt;/p&gt;
@@ -472,9 +472,9 @@ fetch(&amp;#x27;https://exemple.com/&amp;#x27;).then(function(response) {
   
   <entry>
     <title>Comment faire un bouton Google avec du CSS</title>
-    <link href="https://xela.isfucking.cool/blog/fr/how-to-make-a-google-button"/>
+    <link href="https://blog.alexandrecipor.com/fr/how-to-make-a-google-button"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/how-to-make-a-google-button</id>
+    <id>https://blog.alexandrecipor.com/fr/how-to-make-a-google-button</id>
     <content type="html">&lt;p&gt;Personnellement, j’aime le design des boutons google, ils sont simples, légers et modernes à la fois. J’ai donc décidé de reproduire moi-même le design des boutons google avec du CSS.&lt;/p&gt;
 
 &lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
@@ -529,9 +529,9 @@ fetch(&amp;#x27;https://exemple.com/&amp;#x27;).then(function(response) {
   
   <entry>
     <title>Réparer le clic droit sur les icônes de la barre des tâches</title>
-    <link href="https://xela.isfucking.cool/blog/fr/fix-right-click-on-taskbar-icons"/>
+    <link href="https://blog.alexandrecipor.com/fr/fix-right-click-on-taskbar-icons"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/fix-right-click-on-taskbar-icons</id>
+    <id>https://blog.alexandrecipor.com/fr/fix-right-click-on-taskbar-icons</id>
     <content type="html">&lt;p&gt;Quand j’utilise Windows 10, je suis parfois confronté au problème que je ne peux pas faire un clic droit sur mes icônes de la barre des tâches, mais j’ai trouvé quelques solutions pour résoudre cela.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;NB: Cela fonctionne également sur Windows 7 et 8.&lt;/em&gt;&lt;/p&gt;
@@ -576,9 +576,9 @@ Cliquez avec le bouton droit de la souris sur n’importe quoi dans votre barre 
   
   <entry>
     <title>Créer des gists en ligne de commande</title>
-    <link href="https://xela.isfucking.cool/blog/fr/create-gist-from-cli"/>
+    <link href="https://blog.alexandrecipor.com/fr/create-gist-from-cli"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/fr/create-gist-from-cli</id>
+    <id>https://blog.alexandrecipor.com/fr/create-gist-from-cli</id>
     <content type="html">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
 &lt;p&gt;1.

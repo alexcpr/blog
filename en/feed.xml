@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>News 'n' Updates | Xela's Blog</title>
-  <link href="https://xela.isfucking.cool/feed.xml" rel="self"/>
-  <link href="https://xela.isfucking.cool/"/>
+  <title>News 'n' Updates | Alexandre's Blog</title>
+  <link href="https://blog.alexandrecipor.com/feed.xml" rel="self"/>
+  <link href="https://blog.alexandrecipor.com/"/>
   <updated>2018-09-08T15:16:29+02:00</updated>
-  <id>https://xela.isfucking.cool/</id>
+  <id>https://blog.alexandrecipor.com/</id>
   <author>
     <name></name>
   </author>
@@ -15,9 +15,9 @@
   
   <entry>
     <title>Why is w3schools a bad information source?</title>
-    <link href="https://xela.isfucking.cool/blog/en/why-is-w3schools-bad"/>
+    <link href="https://blog.alexandrecipor.com/en/why-is-w3schools-bad"/>
     <updated>2018-08-29T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/why-is-w3schools-bad</id>
+    <id>https://blog.alexandrecipor.com/en/why-is-w3schools-bad</id>
     <content type="html">&lt;p&gt;As a developer, I’m using &lt;a href=&quot;https://discordapp.com/&quot;&gt;Discord&lt;/a&gt; every day to talk with people and friends about programming stuff, but I am mainly in programming Discord servers and I was, especially in a Discord server for a few days, which have ~25K members and I saw some people referring people to &lt;a href=&quot;https://www.w3schools.com/&quot;&gt;w3schools&lt;/a&gt;, which is a bad information source to learn programming. So, I decided, to alert a staff to do something about it, and the staff said that w3schools is sometimes outdated, but that it’s not a big problem. However, in fact, it is a big problem because as a starter when you learn something and do it all the time it’s hard to stop doing it even more if nobody alerts you about it. With everything we know about web development best practices, w3schools ability to remain that known, baffles us all.&lt;/p&gt;
 
 &lt;p&gt;I’m not the first one saying that w3schools is bad and writing about it. &lt;a href=&quot;https://web.archive.org/web/20110412103745/http://w3fools.com&quot;&gt;This has already been done in the past&lt;/a&gt;, the problem is that now they say that w3schools resolved these issues, well, I will show you they didn’t resolve all of them.&lt;/p&gt;
@@ -121,7 +121,7 @@
       &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/js/js_variables.asp&quot;&gt;JavaScript Variables tutorial&lt;/a&gt; there are several examples of reporting several variables on the same line, without assignment.&lt;/li&gt;
       &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/js/js_operators.asp&quot;&gt;JavaScript Operators tutorial&lt;/a&gt; they don’t mention the &lt;code&gt;**&lt;/code&gt; operator.&lt;/li&gt;
       &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/js/js_datatypes.asp&quot;&gt;JavaScript Data Types tutorial&lt;/a&gt; they say, “You can consider it a bug in JavaScript that typeof null is an object. It should be null.” It was a bug in the beginning, but this text could make think, wrongly that this behavior will change one day.&lt;/li&gt;
-      &lt;li&gt;No tutorial/documentation about the modern &lt;code&gt;fetch&lt;/code&gt; API only about &lt;a href=&quot;https://www.w3schools.com/js/js_ajax_intro.asp&quot;&gt;XMLHttpRequest&lt;/a&gt;. &lt;em&gt;&lt;a href=&quot;https://xela.isfucking.cool/blog/en/fetch-api&quot;&gt;See why you should be using fetch and not XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;No tutorial/documentation about the modern &lt;code&gt;fetch&lt;/code&gt; API only about &lt;a href=&quot;https://www.w3schools.com/js/js_ajax_intro.asp&quot;&gt;XMLHttpRequest&lt;/a&gt;. &lt;em&gt;&lt;a href=&quot;https://blog.alexandrecipor.com/en/fetch-api&quot;&gt;See why you should be using fetch and not XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/js/js_objects.asp&quot;&gt;JavaScript Objects tutorial&lt;/a&gt; they could have used short syntax for object methods like this&lt;/li&gt;
     &lt;/ul&gt;
     &lt;pre&gt;&lt;code class=&quot;json&quot;&gt;{
@@ -148,7 +148,7 @@
       &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/php/php_install.asp&quot;&gt;PHP Installation tutorial&lt;/a&gt; PHP5 still and there is no real explanation on how to install PHP, it’s like saying “Look at the doc and deal with it, we won’t tell you about php -S (php internal web server for development)”&lt;/li&gt;
       &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/php/php_variables.asp&quot;&gt;PHP Variables tutorial&lt;/a&gt; they use &lt;code&gt;&quot;&lt;/code&gt; by default instead of &lt;code&gt;'&lt;/code&gt; even without interpolation. They use global variables, which is a bad practice as well.&lt;/li&gt;
       &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/php/php_arrays.asp&quot;&gt;PHP Arrays tutorial&lt;/a&gt; they use the old long syntax &lt;code&gt;array()&lt;/code&gt; although they should use the short syntax &lt;code&gt;[]&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/php/php_ajax_intro.asp&quot;&gt;PHP Ajax tutorial&lt;/a&gt; their JavaScript and PHP codes are full of bad practices, and they don’t even talk about the fact that nowadays you should use the &lt;code&gt;fetch&lt;/code&gt; API instead AJAX. &lt;em&gt;&lt;a href=&quot;https://xela.isfucking.cool/blog/en/fetch-api&quot;&gt;See why you should be using fetch and not XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;In their &lt;a href=&quot;https://www.w3schools.com/php/php_ajax_intro.asp&quot;&gt;PHP Ajax tutorial&lt;/a&gt; their JavaScript and PHP codes are full of bad practices, and they don’t even talk about the fact that nowadays you should use the &lt;code&gt;fetch&lt;/code&gt; API instead AJAX. &lt;em&gt;&lt;a href=&quot;https://blog.alexandrecipor.com/en/fetch-api&quot;&gt;See why you should be using fetch and not XMLHttp&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
       &lt;li&gt;No tutorial about hashing passwords.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -177,7 +177,7 @@
 &lt;p&gt;They was using HTML tables for layout and by the way this is not a lamp 😂
 And I’m sure you can still find some funny things they were doing a few years ago.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;PS:&lt;/strong&gt; If I forgot something, you can &lt;a href=&quot;https://help.github.com/articles/creating-an-issue/&quot;&gt;open an issue&lt;/a&gt; on the &lt;a href=&quot;https://github.com/binksxela/binksxela.github.io&quot;&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PS:&lt;/strong&gt; If I forgot something, you can &lt;a href=&quot;https://help.github.com/articles/creating-an-issue/&quot;&gt;open an issue&lt;/a&gt; on the &lt;a href=&quot;https://github.com/binksAlexandre/binksAlexandre.github.io&quot;&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; w3schools →🗑, use &lt;a href=&quot;https://developer.mozilla.org/en-US/&quot;&gt;the MDN&lt;/a&gt; instead 🕶&lt;/p&gt;
 </content>
@@ -189,9 +189,9 @@ And I’m sure you can still find some funny things they were doing a few years 
   
   <entry>
     <title>Stop using XMLHttpRequest and switch to fetch</title>
-    <link href="https://xela.isfucking.cool/blog/en/fetch-api"/>
+    <link href="https://blog.alexandrecipor.com/en/fetch-api"/>
     <updated>2018-08-10T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/fetch-api</id>
+    <id>https://blog.alexandrecipor.com/en/fetch-api</id>
     <content type="html">&lt;p&gt;The most popular XHR API is &lt;code&gt;XMLHttpRequest&lt;/code&gt; which wasn’t really made for what we’ve been using it for. That’s why &lt;code&gt;fetch&lt;/code&gt; API has been created, the &lt;code&gt;fetch&lt;/code&gt; API is in some sort a modern replacement for &lt;code&gt;XMLHttpRequest&lt;/code&gt;. Let’s have a basic look at this &lt;code&gt;window.fetch&lt;/code&gt; method.&lt;/p&gt;
 
 &lt;h2 id=&quot;browser-compatibility&quot;&gt;Browser compatibility&lt;/h2&gt;
@@ -451,9 +451,9 @@ fetch(&amp;#x27;https://exemple.com/&amp;#x27;).then(function(response) {
   
   <entry>
     <title>Page load time counter in JS</title>
-    <link href="https://xela.isfucking.cool/blog/en/page-load-time-counter"/>
+    <link href="https://blog.alexandrecipor.com/en/page-load-time-counter"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/page-load-time-counter</id>
+    <id>https://blog.alexandrecipor.com/en/page-load-time-counter</id>
     <content type="html">&lt;p&gt;What I would like to see on websites is a little counter of the page load time placed in the footer, so I decided to share you the little piece of code in order to easily integrate this counter in your website footer.&lt;/p&gt;
 
 &lt;p&gt;ES5 Version (Older browsers)&lt;/p&gt;
@@ -480,9 +480,9 @@ fetch(&amp;#x27;https://exemple.com/&amp;#x27;).then(function(response) {
   
   <entry>
     <title>How to make a Google button with CSS</title>
-    <link href="https://xela.isfucking.cool/blog/en/how-to-make-a-google-button"/>
+    <link href="https://blog.alexandrecipor.com/en/how-to-make-a-google-button"/>
     <updated>2018-08-07T00:00:00+02:00</updated>
-    <id>https://xela.isfucking.cool/blog/en/how-to-make-a-google-button</id>
+    <id>https://blog.alexandrecipor.com/en/how-to-make-a-google-button</id>
     <content type="html">&lt;p&gt;I personally like the google buttons design, they are simple, lightweight and modern at the same time. So I decided to reproduce the google buttons design myself with some CSS.&lt;/p&gt;
 
 &lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
