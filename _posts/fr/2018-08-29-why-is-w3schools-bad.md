@@ -12,7 +12,6 @@ Je ne suis pas le premier à dire que w3schools est mauvais ni le dernier à éc
 ## Exemple de mauvaises pratiques que w3schools vous fait apprendre
 
 - HTML
-
   - Vous ne me croirez probablement pas, mais oui, w3schools recommande aux gens d’utiliser Notepad pour les utilisateurs de Windows et TextEdit pour les utilisateurs de Mac.
 
   « Les pages Web peuvent être créées et modifiées à l’aide d’éditeurs HTML professionnels.
@@ -139,6 +138,6 @@ Je me balader sur le [forum de w3schools](http://w3schools.invisionzone.com/) et
 
 Ils utilisaient des tableaux HTML pour la mise en page et d’ailleurs ce n’est pas une lampe 😂 Et je suis sûr que vous pouvez trouver encore des choses drôles qu’ils faisaient il y a quelques années.
 
-\*_PS:_- Si j’ai oublié quelque chose, vous pouvez [ouvrir une issue](https://help.github.com/articles/creating-an-issue/) sur le [dépôt GitHub](https://github.com/alexcpr/blog).
+**PS:** Si j’ai oublié quelque chose, vous pouvez [ouvrir une issue](https://help.github.com/articles/creating-an-issue/) sur le [dépôt GitHub](https://github.com/alexcpr/blog).
 
-\*_TL;DR_- w3schools →🗑, utilisez plutôt [le MDN](https://developer.mozilla.org/en-US/) 🕶
+**TL;DR** w3schools →🗑, utilisez plutôt [le MDN](https://developer.mozilla.org/en-US/) 🕶

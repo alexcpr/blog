@@ -12,7 +12,6 @@ I’m not the first one saying that w3schools is bad and writing about it. <a hr
 ## Example of bad practices that w3schools makes you learn
 
 - HTML
-
   - You probably won't believe me, but yes w3schools recommend to people to use Notepad for Windows users and TextEdit for Mac users.
 
   « Web pages can be created and modified by using professional HTML editors.
@@ -31,30 +30,29 @@ I’m not the first one saying that w3schools is bad and writing about it. <a hr
   - In their [HTML Basics tutorial](https://www.w3schools.com/html/html_basic.asp), they use `width` and `height` attributes in an `<img>` tag instead of using CSS. Barely better [here](https://www.w3schools.com/html/html_assets/images.asp), they inline style into the `<img>` tag.
   - In their [HTML Headings tutorial](https://www.w3schools.com/html/html_headings.asp), they inline style in an `<h1>` tag. Even in their [HTML Styles tutorial](https://www.w3schools.com/html/html_styles.asp) and [HTML CSS tutorial](https://www.w3schools.com/html/html_css.asp), they do so.
   - In their [HTML Links tutorial](https://www.w3schools.com/html/html_links.asp), showing how to change default `<a>` colors they did this.
-
-    <pre><code>&#x3C;style&#x3E;
-      a:link {
-          color: green;
-          background-color: transparent;
-          text-decoration: none;
-      }
-      a:visited {
-          color: pink;
-          background-color: transparent;
-          text-decoration: none;
-      }
-      a:hover {
-          color: red;
-          background-color: transparent;
-          text-decoration: underline;
-      }
-      a:active {
-          color: yellow;
-          background-color: transparent;
-          text-decoration: underline;
-      }
-    &#x3C;/style&#x3E;
-    </code></pre>
+  <pre><code>&#x3C;style&#x3E;
+    a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+  &#x3C;/style&#x3E;
+  </code></pre>
 
   _Note that this time they used a <code>&#x3C;style&#x3E;</code> tag!_
 
