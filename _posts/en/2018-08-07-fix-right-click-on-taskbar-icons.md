@@ -3,6 +3,7 @@ layout: post_en
 title: Fix right click on taskbar icons
 lang: en_US
 toc: true
+image: /assets/meta/en/fix-right-click-on-taskbar-icons.png
 ---
 
 When I’m using Windows 10 I am sometimes facing the problem that I can’t right click on my taskbar icons, but I found a few solutions on how to fix it.

@@ -2,6 +2,7 @@
 layout: post_js_fr
 title: Créer des gists en ligne de commande
 lang: fr_FR
+image: /assets/meta/fr/create-gist-from-cli.png
 ---
 
 ## Installation

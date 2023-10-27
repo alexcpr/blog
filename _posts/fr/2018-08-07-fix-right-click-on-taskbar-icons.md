@@ -3,6 +3,7 @@ layout: post_fr
 title: Réparer le clic droit sur les icônes de la barre des tâches
 lang: fr_FR
 toc: true
+image: /assets/meta/fr/fix-right-click-on-taskbar-icons.png
 ---
 
 Quand j’utilise Windows 10, je suis parfois confronté au problème que je ne peux pas faire un clic droit sur mes icônes de la barre des tâches, mais j’ai trouvé quelques solutions pour résoudre cela.

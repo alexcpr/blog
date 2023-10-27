@@ -3,6 +3,7 @@ layout: post_js_en
 title: Why is w3schools a bad information source?
 lang: en_US
 toc: true
+image: /assets/meta/en/why-is-w3schools-bad.png
 ---
 
 As a developer, I’m using <a href="https://discordapp.com/">Discord</a> every day to talk with people and friends about programming stuff, but I am mainly in programming Discord servers and I was, especially in a Discord server for a few days, which have ~25K members and I saw some people referring people to <a href="https://www.w3schools.com/">w3schools</a>, which is a bad information source to learn programming. So, I decided, to alert a staff to do something about it, and the staff said that w3schools is sometimes outdated, but that it’s not a big problem. However, in fact, it is a big problem because as a starter when you learn something and do it all the time it’s hard to stop doing it even more if nobody alerts you about it. With everything we know about web development best practices, w3schools ability to remain that known, baffles us all.

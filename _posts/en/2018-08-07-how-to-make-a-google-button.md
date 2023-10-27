@@ -2,6 +2,7 @@
 layout: post_js_en
 title: How to make a Google button with CSS
 lang: en_US
+image: /assets/meta/en/how-to-make-a-google-button.png
 ---
 
 I personally like the Google buttons design; they are simple, lightweight, and modern at the same time. So, I decided to reproduce the Google buttons' design myself with some CSS.

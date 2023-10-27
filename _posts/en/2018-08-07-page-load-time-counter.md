@@ -2,6 +2,7 @@
 layout: post_js_en
 title: Page load time counter in JS
 lang: en_US
+image: /assets/meta/en/page-load-time-counter.png
 ---
 
 What I would like to see on websites is a little counter of the page load time placed in the footer, so I decided to share you the little piece of code in order to easily integrate this counter in your website footer.

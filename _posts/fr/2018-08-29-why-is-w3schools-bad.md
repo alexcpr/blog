@@ -3,6 +3,7 @@ layout: post_js_fr
 title: Pourquoi w3schools est-il une mauvaise source d'information ?
 lang: fr_FR
 toc: true
+image: /assets/meta/fr/why-is-w3schools-bad.png
 ---
 
 En tant que développeur, j’utilise [Discord](https://discordapp.com/) tous les jours pour discuter avec des personnes et des amis au sujet de la programmation et je suis principalement dans des serveurs Discord en rapport à la programmation. J’ai surtout été dans un serveur Discord en particulier pendant quelques jours, serveur rassemblant environ 25.000 membres, et j’ai pu apercevoir des personnes partager des liens menants vers des tutoriels du site [w3schools](https://www.w3schools.com/), site qui est une mauvaise source d’information pour apprendre à programmer. J’ai donc décidé d’alerter un administrateur pour qu’il fasse quelque chose à ce sujet et il m’avait répondu que les tutoriels provenant du site w3schools sont parfois désuets et que cela n’est pas un gros problème en soi. Cependant, il est clair que c’est un gros problème parce que, en tant que débutant, quand on apprend quelque chose et qu’on le fait tout le temps, il est difficile d’arrêter de le faire et encore plus si personne ne vous en avertit. Avec tout ce que nous savons sur les meilleures pratiques de développement web, la capacité de w3schools à rester connu nous déconcerte tous.

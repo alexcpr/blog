@@ -2,6 +2,7 @@
 layout: post_js_fr
 title: Compteur de temps de chargement d'une page en JS
 lang: fr_FR
+image: /assets/meta/fr/page-load-time-counter.png
 ---
 
  Ce que j’aimerais voir sur les sites web est un petit compteur du temps de chargement de la page placé dans le footer de la page, alors j’ai décidé de vous partager le petit morceau de code afin d’intégrer facilement ce compteur dans le footer sur votre site web.
