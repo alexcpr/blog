@@ -1,10 +1,6 @@
-assets/
-css/normalize.css
-css/style.css
-js/highlight.pack.js
-js/highlight.line-numbers.js
-js/app-en.es6.js
-js/app-fr.es6.js
-js/app-nojs-en.es6.js
-js/app-nojs-fr.es6.js
-css/app.css
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+Gemfile.lock

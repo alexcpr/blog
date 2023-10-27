@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    {% seo %}
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+    <link rel="stylesheet" href="/assets/css/home.css" />
+</head>
+
+<body>
+    <div class="placeholder">
+        <div class="ph-item">
+            <div class="ph-col-12">
+                <div class="ph-row">
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-6 empty"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-2 empty"></div>
+                    <div class="ph-col-small"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-4"></div>
+                    <div class="ph-col-small"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-4"></div>
+                    <div class="ph-col-small"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-4"></div>
+                    <div class="ph-col-small"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-2"></div>
+                    <div class="ph-col-2 empty"></div>
+                    <div class="ph-col-small"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-small"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-4 big"></div>
+                    <div class="ph-col-small"></div>
+                    <div class="ph-col-2 big"></div>
+                    <div class="ph-col-4 empty"></div>
+                    <div class="ph-col-4"></div>
+                    <div class="ph-col-8 empty"></div>
+                    <div class="ph-col-4"></div>
+                    <div class="ph-col-12 empty"></div>
+                    <div class="ph-col-5 empty"></div>
+                    <div class="ph-col-2"></div>
+                    <div class="ph-col-5 empty"></div>
+                    <div class="ph-col-12 empty"></div>
+                    <div class="ph-col-5 empty"></div>
+                    <div class="ph-col-2"></div>
+                    <div class="ph-col-5 empty"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" style="display: none">
+        <main>
+            <article>
+                <h2>Lastest articles</h2>
+                <ul class="blog-list">
+                    {% for post in site.posts %}
+                    {% if post.lang == 'en_US' %}
+                    <li>
+                        <span class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </article>
+            <aside>
+                <h1>Alexandre's Blog</h1>
+                <div class="abstract">
+                    <i class="fa fa-quote-left fa-3x fa-pull-left" aria-hidden="true"></i>
+                    Programming is an important part of my life, so as a developer, I wanted to make a blog in order to
+                    share what I know, but especially interesting things that I discover.
+                </div>
+                <hr />
+                <ul class="fa-ul">
+                    <!-- <li>
+                        <i class="fa-li fa fa-rss"></i>Want to be kept posted?
+                        <a href="/en/feed.xml">There is a RSS feed</a> for that!
+                    </li> -->
+                    <li>
+                        <i class="fa-li fa fa-code-fork"></i>The source of this website is
+                        available
+                        <a href="https://github.com/alexcpr/blog">here.</a>
+                    </li>
+                </ul>
+            </aside>
+        </main>
+        <footer>
+            <div style="text-align: center">
+                <p id="loadtime"></p>
+                <p>
+                    <!-- subscribe <a href="/en/feed.xml">via RSS</a> - -->
+                    <a href="/fr" id="r">FR Version</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script defer>
+        var _ = document.querySelector.bind(document);
+        function fadeOut(a) {
+            (a.style.opacity = 1),
+                (function b() {
+                    0 > (a.style.opacity -= 0.1)
+                        ? (a.style.display = "none")
+                        : requestAnimationFrame(b);
+                })();
+        }
+        function fadeIn(a) {
+            (a.style.opacity = 0),
+                (a.style.display = ""),
+                (function b() {
+                    var c = parseFloat(a.style.opacity);
+                    1 < (c += 0.1) || ((a.style.opacity = c), requestAnimationFrame(b)),
+                        (a.style.opacity = 1) && (a.style.opacity = "");
+                })();
+        }
+        window.addEventListener("load", function () {
+            var a = _(".placeholder"),
+                b = _(".content");
+            a.parentNode.removeChild(a), fadeIn(b);
+        });
+    </script>
+    <script>
+        window.onload = () => {
+            for (let c = document.links, d = 0, f = c.length; f > d; d++)
+                c[d].hostname != window.location.hostname &&
+                    (c[d].innerHTML +=
+                        ' <i class="fa fa-external-link" style="font-size:0.7em"></i>');
+            setTimeout(() => {
+                const c = window.performance && performance.timing,
+                    d = (c.loadEventEnd - c.navigationStart) / 1e3;
+                _("#loadtime").innerHTML = `This page loaded in ${d} seconds`;
+            }, 0),
+                _("#r").addEventListener("click", (c) => {
+                    c.preventDefault();
+                    const d = window.location.pathname;
+                    (nurl = d.includes("/fr/")
+                        ? d.replace("/fr/", "/en/")
+                        : d.includes("/en/")
+                            ? d.replace("/en/", "/fr/")
+                            : "/fr"),
+                        (window.location = nurl);
+                });
+        };
+    </script>
+</body>
+
+</html>

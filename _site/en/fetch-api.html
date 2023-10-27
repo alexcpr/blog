@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Stop using XMLHttpRequest and switch to fetch | Alexandre’s Blog</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Stop using XMLHttpRequest and switch to fetch" />
+<meta name="author" content="Alexandre CIPOR" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The most popular XHR API is XMLHttpRequest which wasn’t really made for what we’ve been using it for. That’s why fetch API has been created, the fetch API is in some sort a modern replacement for XMLHttpRequest. Let’s have a basic look at this window.fetch method." />
+<meta property="og:description" content="The most popular XHR API is XMLHttpRequest which wasn’t really made for what we’ve been using it for. That’s why fetch API has been created, the fetch API is in some sort a modern replacement for XMLHttpRequest. Let’s have a basic look at this window.fetch method." />
+<link rel="canonical" href="https://blog.alexandrecipor.com//en/fetch-api" />
+<meta property="og:url" content="https://blog.alexandrecipor.com//en/fetch-api" />
+<meta property="og:site_name" content="Alexandre’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-10T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stop using XMLHttpRequest and switch to fetch" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexandre CIPOR","url":"https://alexandrecipor.com/"},"dateModified":"2018-08-10T00:00:00+02:00","datePublished":"2018-08-10T00:00:00+02:00","description":"The most popular XHR API is XMLHttpRequest which wasn’t really made for what we’ve been using it for. That’s why fetch API has been created, the fetch API is in some sort a modern replacement for XMLHttpRequest. Let’s have a basic look at this window.fetch method.","headline":"Stop using XMLHttpRequest and switch to fetch","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.alexandrecipor.com//en/fetch-api"},"url":"https://blog.alexandrecipor.com//en/fetch-api"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+    <script defer type="text/javascript" src="/assets/js/app-en.js"></script>
+    <link rel="stylesheet" href="/assets/css/postjs.css" />
+</head>
+
+<body>
+    <main>
+        <article>
+            <h1>Stop using XMLHttpRequest and switch to fetch</h1>
+            <nav>
+                <a href="/en">
+                    <i class="fa fa-chevron-left" style="font-size: 0.7em"></i> Go back
+                    to index</a>
+            </nav>
+            <div>
+                <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#browser-compatibility">Browser compatibility</a></li>
+<li class="toc-entry toc-h2"><a href="#basic-xmlhttprequest-usage">Basic XMLHttpRequest Usage</a></li>
+<li class="toc-entry toc-h2"><a href="#basic-fetch-usage">Basic fetch Usage</a></li>
+<li class="toc-entry toc-h2"><a href="#request-headers">Request Headers</a></li>
+<li class="toc-entry toc-h2"><a href="#request">Request</a></li>
+<li class="toc-entry toc-h2"><a href="#response">Response</a></li>
+<li class="toc-entry toc-h2"><a href="#handling-json">Handling JSON</a></li>
+<li class="toc-entry toc-h2"><a href="#handling-basic-texthtml-responses">Handling Basic Text/HTML Responses</a></li>
+<li class="toc-entry toc-h2"><a href="#handling-blob-responses">Handling Blob Responses</a></li>
+<li class="toc-entry toc-h2"><a href="#posting-form-data">Posting Form Data</a></li>
+<li class="toc-entry toc-h2"><a href="#polyfill">Polyfill</a></li>
+</ul><p>The most popular XHR API is <code>XMLHttpRequest</code> which wasn’t really made for what we’ve been using it for. That’s why <code>fetch</code> API has been created, the <code>fetch</code> API is in some sort a modern replacement for <code>XMLHttpRequest</code>. Let’s have a basic look at this <code>window.fetch</code> method.</p>
+
+<h2 id="browser-compatibility">
+<a class="anchor" href="#browser-compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Browser compatibility</h2>
+
+<p>An important thing while developing a web application is the browser compatibility with the technologies used. As <code>XMLHttpRequest</code> is older it logically have a better compatibility with older browsers compared to <code>fetch</code> however, there is well done <code>fetch</code> polyfill’s which makes this modern API compatible with older browsers such as IE, etc…</p>
+
+<p>(c.f <a href="https://caniuse.com/#search=XMLHttpRequest">XMLHttpRequest Compatibility</a>, <a href="https://caniuse.com/#search=Fetch">Fetch Compatibility</a>)</p>
+
+<h2 id="basic-xmlhttprequest-usage">
+<a class="anchor" href="#basic-xmlhttprequest-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic <code class="language-plaintext highlighter-rouge">XMLHttpRequest</code> Usage</h2>
+
+<p>XHR is a bit overcomplicated in my opinion and I still don’t understand why <code class="language-plaintext highlighter-rouge">XML</code> is uppercase while <code class="language-plaintext highlighter-rouge">Http</code> is camel-cased, it doesn’t make any sense at all. Anyways, here’s a common XHR usage</p>
+
+<pre><code class="javascript">if (window.XMLHttpRequest) { // Mozilla, Safari, etc...
+    request = new XMLHttpRequest();
+} else if (window.ActiveXObject) { // IE
+    try {
+        request = new ActiveXObject('Msxml2.XMLHTTP');
+    }
+    catch (e) {
+        try {
+            request = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+        catch (e) {}
+    }
+}
+
+// Open the request and send it.
+request.open('GET', 'https://example.com/api', true);
+request.send(null);
+</code></pre>
+
+<p>Of course JavaScript frameworks make XHR more pleasant to work with, but what you see above is a “<strong>simple</strong>” example of the most basic XHR usage. XHR is a real mess.</p>
+
+<h2 id="basic-fetch-usage">
+<a class="anchor" href="#basic-fetch-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic <code>fetch</code> Usage</h2>
+
+<p>The <code>fetch</code> function is provided in the global <code>window</code> scope, with the first argument being the URL (required) and the second the options (optional)</p>
+
+<pre><code class="javascript">// fetch(url, options) | url: required - options: optional
+fetch('https://example.com/api', {
+    method: 'get'
+}).then(function(response) {
+    // Success :)
+}).catch(function(err) {
+    // Error :(
+});
+</code></pre>
+
+<p>And as you can see <code>fetch</code> uses <strong>Javascript Promises</strong> in order to handle results/callbacks. If you aren’t used to <strong>Javascript Promises</strong> yet, get used to it – it will soon be everywhere.</p>
+
+<h2 id="request-headers">
+<a class="anchor" href="#request-headers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Request Headers</h2>
+
+<p>The ability to set request headers is important in request flexibility, you can work with request headers by executing <code>new Headers()</code></p>
+
+<pre><code class="javascript">// Create an empty Headers instance
+const headers = new Headers();
+
+// Add headers
+headers.append('Custom-Header', 'MySuperValue');
+headers.append('Content-Type', 'text/html');
+
+// Check if this header is present
+headers.has('Content-Type'); // true
+headers.has('Some-Header'); // false
+
+// Get the value of a specific header
+headers.get('Custom-Header'); // MySuperValue
+
+// Set a new value for an existing header
+headers.set('Content-Type', 'text/plain');
+
+// Delete a header
+headers.delete('Custom-Header');
+
+// Add initial values
+const headers = new Headers({
+    'Content-Type': 'application/json',
+    'User-Agent': 'MySuperUserAgent'
+});
+</code></pre>
+
+<p>In order to use request headers, you must first create a new <code>Request</code> instance</p>
+
+<pre><code class="javascript">const request = new Request('https://example.com/api', {
+    headers: new Headers({
+        'Content-Type': 'application/json',
+        'User-Agent': 'MyCustomUserAgent'
+    })
+});
+
+fetch(request).then(function(response) {
+    // process the response
+}).catch(function(error) {
+    // process the error
+});
+</code></pre>
+
+<h2 id="request">
+<a class="anchor" href="#request" aria-hidden="true"><span class="octicon octicon-link"></span></a>Request</h2>
+
+<p>A <code>Request</code> instance represents the request piece of a <code>fetch</code> call. By passing <code>fetch</code> a <code>Request</code> you can make advanced and customized requests:</p>
+
+<ul>
+  <li>
+<code>method</code> - <strong>GET</strong>, <strong>HEAD</strong>, <strong>POST</strong>, <strong>PUT</strong>, <strong>DELETE</strong>
+</li>
+  <li>
+<code>url</code> - <strong>URL</strong> of the request</li>
+  <li>
+<code>headers</code> - associated <strong>Headers</strong> object</li>
+  <li>
+<code>referrer</code> - referrer of the request</li>
+  <li>
+<code>mode</code> - <strong>cors</strong>, <strong>no-cors</strong>, <strong>same-origin</strong>
+</li>
+  <li>
+<code>credentials</code> - should cookies go with the request? <strong>omit</strong>, <strong>same-origin</strong>
+</li>
+  <li>
+<code>redirect</code> - <strong>follow</strong>, <strong>error</strong>, <strong>manual</strong>
+</li>
+  <li>
+<code>integrity</code> - subresource integrity value</li>
+  <li>
+<code>cache</code> - cache mode (<strong>default</strong>, <strong>reload</strong>, <strong>no-cache</strong>)</li>
+</ul>
+
+<p>Here’s a sample of <code>Request</code> usage</p>
+
+<pre><code class="javascript">// Build the request
+const request = new Request('https://example.com/anything', {
+    method: 'HEAD',
+    mode: 'no-cors',
+    redirect: 'follow',
+    headers: new Headers({
+        'Content-Type': 'text/html'
+    })
+});
+
+// And now use the request
+fetch(request).then(function() {
+    // handle response
+});
+</code></pre>
+
+<p>Only the first parameter, the URL, is required. Each property becomes read only once the <code>Request</code> instance has been created. Also important to note that <code>Request</code> has a clone method which is important when using <code>fetch</code> within the Service Worker API – a <code>Request</code> is a stream and thus must be cloned when passing to another <code>fetch</code> call.</p>
+
+<pre><code class="javascript">fetch('https://example.com/anything', {
+    method: 'HEAD',
+    mode: 'no-cors',
+    redirect: 'follow',
+    headers: new Headers({
+        'Content-Type': 'text/html'
+    })
+}).then(function() {
+    // handle response
+});
+</code></pre>
+
+<p>You’ll likely only use Request instances within Service Workers since the Request and fetch signatures can be the same.</p>
+
+<h2 id="response">
+<a class="anchor" href="#response" aria-hidden="true"><span class="octicon octicon-link"></span></a>Response</h2>
+
+<p>The fetch’s then method is provided a Response instance but you can also manually create Response objects yourself – another situation you may encounter when using service workers. With a Response you can configure:</p>
+
+<ul>
+  <li>
+<code>type</code> - <strong>basic</strong>, <strong>cors</strong>
+</li>
+  <li><code>url</code></li>
+  <li>
+<code>useFinalURL</code> - Boolean for if <strong>url</strong> is the final URL</li>
+  <li>
+<code>status</code> - status code (ex: <strong>200</strong>, <strong>404</strong>, etc.)</li>
+  <li>
+<code>ok</code> - Boolean for successful response (status in the range 200-299)</li>
+  <li>
+<code>statusText</code> - status code (ex: <strong>OK</strong>)</li>
+  <li>
+<code>headers</code> - Headers object associated with the response.</li>
+</ul>
+
+<pre><code class="javascript">// Fake response for service worker testing -- new Response(body, options)
+const response = new Response('response body', {
+    ok: false,
+    status: 404,
+    url: '/'
+});
+
+// The fetch's then gets a Response instance back
+fetch('https://exemple.com/').then(function(response) {
+    console.log('ok: ', response.ok); // false
+});
+</code></pre>
+
+<p>The <code>Response</code> also provides the following methods:</p>
+
+<ul>
+  <li>
+<code>clone()</code> Creates a clone of a Response object</li>
+  <li>
+<code>error()</code> Returns a new Response object associated with a network error</li>
+  <li>
+<code>redirect()</code> Creates a new response with a different URL</li>
+  <li>
+<code>arrayBuffer()</code> Returns a promise that resolves with an ArrayBuffer</li>
+  <li>
+<code>blob()</code> Returns a promise that resolves with a Blob</li>
+  <li>
+<code>formData()</code> Returns a promise that resolves with a FormData object</li>
+  <li>
+<code>json()</code> Returns a promise that resolves with a JSON object</li>
+  <li>
+<code>text()</code> Returns a promise that resolves with a USVString (text)</li>
+</ul>
+
+<h2 id="handling-json">
+<a class="anchor" href="#handling-json" aria-hidden="true"><span class="octicon octicon-link"></span></a>Handling JSON</h2>
+
+<p>Let’s say you make a request for JSON, the resulting callback data has a json method for converting the raw data to a JavaScript object</p>
+
+<pre><code class="javascript">fetch('https://example.com/api/list.json').then(function(response) {
+    // Convert to JSON
+    return response.json();
+}).then(function(jsObj) {
+    // jsObj is an javascript object from the json response
+    console.log(jsObj);
+});
+</code></pre>
+
+<p>The <code>json()</code> method is a simple shortcut to <code>JSON.parse(jsonString)</code></p>
+
+<h2 id="handling-basic-texthtml-responses">
+<a class="anchor" href="#handling-basic-texthtml-responses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Handling Basic Text/HTML Responses</h2>
+
+<p>JSON isn’t always the desired request response format so here’s how you can work with an HTML or text response</p>
+
+<pre><code class="javascript">fetch('/404').then(function(response) {
+    return response.text();
+}).then(function(htmlresponse) {
+    // &lt;!DOCTYPE ....
+    console.log(htmlresponse);
+});
+</code></pre>
+
+<p>You can get the response text via chaining the Promise’s <code>then</code> method along with the <code>text()</code> method.</p>
+
+<h2 id="handling-blob-responses">
+<a class="anchor" href="#handling-blob-responses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Handling Blob Responses</h2>
+
+<p>For example, loading image via fetch its a bit different</p>
+
+<pre><code class="javascript">fetch('https://example.com/someimage.jpg').then(function(response) {
+    return response.blob();
+})
+.then(function(imageBlob) {
+    document.querySelector('img').src = URL.createObjectURL(imageBlob);
+});
+</code></pre>
+
+<p>The <code>blob()</code> method of the Body mixing takes a Response stream and reads it to completion.</p>
+
+<h2 id="posting-form-data">
+<a class="anchor" href="#posting-form-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Posting Form Data</h2>
+
+<p>AJAX is used a lot for sending form data, here’s how you would do it with the use of fetch</p>
+
+<pre><code class="javascript">fetch('https://example.com/submit', {
+    method: 'post',
+    body: new FormData(document.getElementById('myForm'))
+});
+</code></pre>
+
+<p>And if you want to post some JSON data</p>
+
+<pre><code class="javascript">fetch('https://example.com/submit', {
+    method: 'post',
+    body: JSON.stringify({
+        some: document.querySelector('#some').value,
+        json: document.querySelector('#json').value,
+        data: document.querySelector('#data').value
+    })
+});
+</code></pre>
+
+<p>Simple as that!</p>
+
+<h2 id="polyfill">
+<a class="anchor" href="#polyfill" aria-hidden="true"><span class="octicon octicon-link"></span></a>Polyfill</h2>
+
+<p>There is a lot of Polyfill’s for fetch method, but I highly suggest you to check the <a href="https://github.com/github/fetch">GitHub</a> one.</p>
+
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div style="text-align: center">
+            <p id="loadtime"></p>
+            <p>
+                <!-- subscribe <a href="/en/feed.xml">via RSS</a> - -->
+                <a href="/fr" id="r">FR Version</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

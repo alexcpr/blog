@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How to make a Google button with CSS | Alexandre’s Blog</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="How to make a Google button with CSS" />
+<meta name="author" content="Alexandre CIPOR" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I personally like the Google buttons design; they are simple, lightweight, and modern at the same time. So, I decided to reproduce the Google buttons’ design myself with some CSS." />
+<meta property="og:description" content="I personally like the Google buttons design; they are simple, lightweight, and modern at the same time. So, I decided to reproduce the Google buttons’ design myself with some CSS." />
+<link rel="canonical" href="https://blog.alexandrecipor.com//en/how-to-make-a-google-button" />
+<meta property="og:url" content="https://blog.alexandrecipor.com//en/how-to-make-a-google-button" />
+<meta property="og:site_name" content="Alexandre’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-07T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to make a Google button with CSS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alexandre CIPOR","url":"https://alexandrecipor.com/"},"dateModified":"2018-08-07T00:00:00+02:00","datePublished":"2018-08-07T00:00:00+02:00","description":"I personally like the Google buttons design; they are simple, lightweight, and modern at the same time. So, I decided to reproduce the Google buttons’ design myself with some CSS.","headline":"How to make a Google button with CSS","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.alexandrecipor.com//en/how-to-make-a-google-button"},"url":"https://blog.alexandrecipor.com//en/how-to-make-a-google-button"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+    <script defer type="text/javascript" src="/assets/js/app-en.js"></script>
+    <link rel="stylesheet" href="/assets/css/postjs.css" />
+</head>
+
+<body>
+    <main>
+        <article>
+            <h1>How to make a Google button with CSS</h1>
+            <nav>
+                <a href="/en">
+                    <i class="fa fa-chevron-left" style="font-size: 0.7em"></i> Go back
+                    to index</a>
+            </nav>
+            <div>
+                <p>I personally like the Google buttons design; they are simple, lightweight, and modern at the same time. So, I decided to reproduce the Google buttons’ design myself with some CSS.</p>
+
+<h2 id="demo">Demo</h2>
+
+<style>
+    .button {
+        display: inline-block;
+        background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+        -moz-border-radius: 2px;
+        -moz-user-select: none;
+        background-color: #f2f2f2;
+        color: #757575;
+        width: 152px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        border: 1px solid #f2f2f2;
+        border-radius: 2px;
+        cursor: default;
+        font-weight: 700;
+        text-align: center;
+        line-height: 27px;
+        min-width: 54px;
+        padding: 0 16px;
+        text-decoration: none;
+    }
+    .button:hover {
+        background-color: #f8f8f8;
+        background-image: linear-gradient(top, #f8f8f8, #f1f1f1);
+        border: 1px solid #c6c6c6;
+        color: #333;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .button.default:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        color: #000;
+    }
+</style>
+
+<p><a href="#" class="google button">Google Search</a></p>
+
+<h2 id="google-button-source-code">Google Button Source Code</h2>
+
+<p>HTML</p>
+<pre><code class="xml">&#x3C;a href=&#x22;#&#x22; class=&#x22;google button&#x22;&#x3E;Google Search&#x3C;/a&#x3E;</code></pre>
+
+<p>CSS (775 bytes uncompressed)</p>
+<pre><code class="css">.button {
+    display: inline-block;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+    -moz-border-radius: 2px;
+    -moz-user-select: none;
+    background-color: #f2f2f2;
+    color: #757575;
+    width: 152px;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    cursor: default;
+    font-weight: 700;
+    text-align: center;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-decoration: none
+}
+.button:hover {
+    background-color: #f8f8f8;
+    background-image: linear-gradient(top, #f8f8f8, #f1f1f1);
+    border: 1px solid #c6c6c6;
+    color: #333;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1)
+}
+.button.default:active {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    color: #000
+}</code></pre>
+
+<p>And that’s it!</p>
+
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div style="text-align: center">
+            <p id="loadtime"></p>
+            <p>
+                <!-- subscribe <a href="/en/feed.xml">via RSS</a> - -->
+                <a href="/fr" id="r">FR Version</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

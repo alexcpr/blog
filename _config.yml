@@ -1,0 +1,27 @@
+title: Alexandre's Blog
+description: Little blog where I share what I know, but especially interesting things that I discover.
+url: "https://blog.alexandrecipor.com/"
+
+author:
+  name: Alexandre CIPOR
+  url: https://alexandrecipor.com/
+
+social:
+  name: Alexandre CIPOR
+  links:
+    - https://www.instagram.com/alexandrecipor/
+    - https://www.linkedin.com/in/alexandrecipor/
+    - https://github.com/alexcpr/
+
+permalink: /en/:title
+
+defaults:
+  - scope:
+      path: "_posts/fr"
+    values:
+      permalink: /fr/:title
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-toc
